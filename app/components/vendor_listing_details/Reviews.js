@@ -256,14 +256,14 @@ export default function Reviews({ eventId, vendorData, isPreview = false }) {
               <div className={styles.reviewHeader}>
                 <Avatar 
                   user={{
-                    name: userReview.customer.customerProfile.fullName,
-                    profileImage: userReview.customer.customerProfile.profileImage
+                    name: userReview.customer?.customerProfile?.fullName || 'Unknown User',
+                    profileImage: userReview.customer?.customerProfile?.profileImage || '/default_dp.jpg'
                   }}
                   size="small"
                 />
                 <div className={styles.reviewInfo}>
                   <span className={styles.reviewerName}>
-                    {userReview.customer.customerProfile.fullName}
+                    {userReview.customer?.customerProfile?.fullName || 'Unknown User'}
                   </span>
                   <span className={styles.reviewDate}>
                     {formatDate(userReview.createdAt)}
@@ -297,14 +297,14 @@ export default function Reviews({ eventId, vendorData, isPreview = false }) {
                   <div className={styles.reviewHeader}>
                     <Avatar 
                       user={{
-                        name: review.customer.customerProfile.fullName,
-                        profileImage: review.customer.customerProfile.profileImage
+                        name: review.customer?.customerProfile?.fullName || 'Unknown User',
+                        profileImage: review.customer?.customerProfile?.profileImage || '/default_dp.jpg'
                       }}
                       size="small"
                     />
                     <div className={styles.reviewInfo}>
                       <span className={styles.reviewerName}>
-                        {review.customer.customerProfile.fullName}
+                        {review.customer?.customerProfile?.fullName || 'Unknown User'}
                       </span>
                       <span className={styles.reviewDate}>
                         {formatDate(review.createdAt)}

@@ -18,12 +18,12 @@ const transformForDisplay = (backendData) => {
     'Planning': '/cart_icon.png'
   };
   
-  const servicesDisplay = backendData.services.map(service => ({
+  const servicesDisplay = (backendData.services || []).map(service => ({
     icon: serviceIconMap[service] || '/cart_icon.png',
     label: service
   }));
   
-  const packagesDisplay = backendData.packages.map((pkg, index) => {
+  const packagesDisplay = (backendData.packages || []).map((pkg, index) => {
     const pkgPrice = parseInt(pkg.price) || 0;
     const priceDisplay = `$${pkgPrice.toLocaleString()}`;
     
@@ -48,10 +48,10 @@ const transformForDisplay = (backendData) => {
     };
   });
   
-  const locationDisplay = `${backendData.location.city}, ${backendData.location.state}`;
-  const fullAddress = `${backendData.location.address}, ${backendData.location.city}, ${backendData.location.state} ${backendData.location.zipCode}`;
+  const locationDisplay = backendData.location ? `${backendData.location.city || ''}, ${backendData.location.state || ''}` : 'Location not specified';
+  const fullAddress = backendData.location ? `${backendData.location.address || ''}, ${backendData.location.city || ''}, ${backendData.location.state || ''} ${backendData.location.zipCode || ''}` : 'Address not specified';
   
-  const systemTags = backendData.tags.filter(tag => ['Verified User', 'Top Rated Vendor'].includes(tag));
+  const systemTags = (backendData.tags || []).filter(tag => ['Verified User', 'Top Rated Vendor'].includes(tag));
   
   return {
     ...backendData,

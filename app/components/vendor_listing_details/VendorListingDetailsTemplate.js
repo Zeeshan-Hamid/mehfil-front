@@ -195,13 +195,13 @@ export default function VendorListingDetailsTemplate({
   }
 
   console.log('Vendor data in template:', vendorData);
-  console.log('Vendor object:', vendorData.vendor);
+  console.log('Vendor object:', vendorData?.vendor);
 
   return (
     <div className={styles['details-page-container']}>
       <Navbar backgroundColor="#AF8EBA" customHeight="25px 20px"/>
       <section className={styles['main-section']}>
-        <VendorListingImageGrid images={vendorData.images} isPreview={isPreview} />
+        <VendorListingImageGrid images={vendorData.images || []} isPreview={isPreview} />
         <div className={styles['header-section']}>
           <div className={styles['title-row']}>
             <h2 className={styles['vendor-title']} style={{ 
@@ -260,7 +260,7 @@ export default function VendorListingDetailsTemplate({
                   href={`/vendor/${vendorData.vendor._id}`}
                   className={styles['vendor-link']}
                 >
-                  {vendorData.vendor.vendorProfile.businessName}
+                  {vendorData.vendor.vendorProfile?.businessName || 'Unknown Business'}
                 </Link>
               </p>
             </div>
@@ -292,7 +292,7 @@ export default function VendorListingDetailsTemplate({
           <div className={styles['tags-container']}>
             {vendorData.displayTags?.map((tag, i) => (
               <TagLabel key={i} tag={tag} />
-            ))}
+            )) || []}
           </div>
         </div>
       </section>
