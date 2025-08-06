@@ -1,0 +1,96 @@
+/* Notification Bell Styles */
+.bellContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.bellButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bellButton:hover {
+  background: rgba(175, 142, 186, 0.1);
+}
+
+.bellButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(175, 142, 186, 0.3);
+}
+
+.bellIcon {
+  display: block;
+  line-height: 1;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.bellButton:hover .bellIcon {
+  color: #af8eba;
+}
+
+.badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #ff4444;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 5px;
+  border-radius: 10px;
+  min-width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Bell shake animation for new notifications */
+@keyframes bellShake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+.bellButton.shake .bellIcon {
+  animation: bellShake 0.5s ease-in-out;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .bellButton {
+    padding: 6px;
+  }
+  
+  .badge {
+    font-size: 9px;
+    min-width: 14px;
+    height: 14px;
+    padding: 1px 4px;
+  }
+}

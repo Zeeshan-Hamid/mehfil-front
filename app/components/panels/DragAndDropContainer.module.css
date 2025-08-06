@@ -1,0 +1,23 @@
+.dndContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.dndItem {
+  width: 100%;
+  background: transparent;
+  transition: box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.dndItem:active, .dndItem:focus {
+  box-shadow: 0 0 0 2px #bdbdbd;
+  z-index: 10;
+}
+
+.dndItem[draggable="true"] {
+  cursor: grab;
+} 

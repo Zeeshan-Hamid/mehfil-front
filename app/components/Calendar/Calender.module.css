@@ -1,0 +1,238 @@
+.calendar-card {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 14, 51, 0.05);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .calendar-content {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .nav-button {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0px 1px 1px 0px rgba(0, 14, 51, 0.05);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav-icon {
+    width: 24px;
+    height: 24px;
+    transform: rotate(90deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav-arrow {
+    width: 10px;
+    height: 17px;
+    transform: rotate(-90deg);
+  }
+  
+  .month-year-selectors {
+    display: flex;
+    gap: 2px;
+  }
+  
+  .month-selector,
+  .year-selector {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 14, 51, 0.05);
+    cursor: pointer;
+  }
+  
+  .month-text,
+  .year-text {
+    font-family: "Lexend", Helvetica;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.24px;
+    line-height: 100%;
+    color: rgba(20, 20, 20, 1);
+  }
+  
+  .dropdown-arrow {
+    width: 8px;
+    height: 24px;
+    margin-left: 2px;
+  }
+  
+  .days-of-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 4px;
+  }
+  
+  .day-header {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .day-text {
+    font-family: "Lexend", Helvetica;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0px;
+    line-height: 100%;
+    color: rgba(31, 31, 31, 1);
+  }
+  
+  .calendar-grid {
+    position: relative;
+    flex: 1;
+  }
+  
+  .calendar-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 4px;
+  }
+  
+  .calendar-day {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .active-day {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 1px 1px 0px rgba(0, 14, 51, 0.05);
+    border-radius: 6px;
+  }
+  
+  .selected-day {
+    background: #af8eba;
+    border-radius: 6px;
+  }
+  
+  .day-number {
+    font-weight: 500;
+    font-size: 18px;
+    color: rgba(31, 31, 31, 1);
+  }
+  
+  .day-number.inactive {
+    color: rgba(0, 23, 83, 0.15);
+  }
+  
+  .day-number.selected {
+    color: rgba(255, 255, 255, 1);
+  }
+  
+  .event-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    bottom: -12px;
+    background: #ff0000;
+    border-radius: 50%;
+  }
+
+  /* New dynamic calendar styles */
+  .has-events {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 1px 1px 0px rgba(0, 14, 51, 0.05);
+    border-radius: 6px;
+  }
+
+  .today {
+    background: #af8eba;
+    border-radius: 6px;
+  }
+
+  .today .day-number {
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .calendar-day:hover {
+    background: rgba(175, 142, 186, 0.1);
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .calendar-content {
+      padding: 16px;
+    }
+    
+    .month-text,
+    .year-text {
+      font-size: 20px;
+    }
+    
+    .day-text {
+      font-size: 16px;
+    }
+    
+    .day-number {
+      font-size: 16px;
+    }
+    
+    .calendar-day {
+      height: 36px;
+    }
+    
+    .day-header {
+      height: 36px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .calendar-content {
+      padding: 12px;
+    }
+    
+    .month-text,
+    .year-text {
+      font-size: 18px;
+    }
+    
+    .day-text {
+      font-size: 14px;
+    }
+    
+    .day-number {
+      font-size: 14px;
+    }
+    
+    .calendar-day {
+      height: 32px;
+    }
+    
+    .day-header {
+      height: 32px;
+    }
+  }

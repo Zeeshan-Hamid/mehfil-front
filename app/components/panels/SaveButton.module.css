@@ -1,0 +1,106 @@
+.saveButtonActions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #EBEBEB 0%, #FFFFFF 100%);
+  border-radius: 0 0 clamp(6px, 1.2vw, 12px) clamp(6px, 1.2vw, 12px);
+  box-sizing: border-box;
+  z-index: 10;
+  padding: clamp(8px, 1.5vw, 14px) clamp(16px, 2.5vw, 24px);
+  border-top: clamp(1px, 0.1vw, 2px) solid #E0E0E0;
+  display: flex;
+  justify-content: flex-end;
+  gap: clamp(8px, 1.5vw, 12px);
+  margin-top: 0;
+}
+
+.saveButtonCancel {
+  background: #fff;
+  color: #AF8EBA;
+  border: clamp(1px, 0.1vw, 2px) solid #AF8EBA;
+  border-radius: clamp(16px, 2.5vw, 20px);
+  padding: clamp(6px, 1.2vw, 8px) clamp(16px, 2.5vw, 20px);
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(12px, 1.5vw, 14px);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.saveButtonCancel:hover {
+  background: #f8f8f8;
+  transform: translateY(-1px);
+  box-shadow: 0 clamp(1px, 0.2vw, 2px) clamp(2px, 0.4vw, 4px) rgba(0,0,0,0.1);
+}
+
+.saveButtonSave {
+  background: #AF8EBA;
+  color: #fff;
+  border: none;
+  border-radius: clamp(16px, 2.5vw, 20px);
+  padding: clamp(6px, 1.2vw, 8px) clamp(18px, 3vw, 24px);
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(12px, 1.5vw, 14px);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.saveButtonSave:hover {
+  background: #9a7da6;
+  transform: translateY(-1px);
+  box-shadow: 0 clamp(1px, 0.2vw, 2px) clamp(2px, 0.4vw, 4px) rgba(0,0,0,0.15);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .saveButtonActions {
+    padding: clamp(6px, 1.2vw, 10px) clamp(12px, 2vw, 16px);
+    gap: clamp(6px, 1.2vw, 10px);
+  }
+  
+  .saveButtonCancel {
+    padding: clamp(4px, 1vw, 6px) clamp(12px, 2vw, 16px);
+    font-size: clamp(11px, 1.4vw, 13px);
+  }
+  
+  .saveButtonSave {
+    padding: clamp(4px, 1vw, 6px) clamp(14px, 2.5vw, 20px);
+    font-size: clamp(11px, 1.4vw, 13px);
+  }
+}
+
+@media (max-width: 480px) {
+  .saveButtonActions {
+    padding: clamp(5px, 1vw, 8px) clamp(8px, 1.5vw, 12px);
+    gap: clamp(5px, 1vw, 8px);
+  }
+  
+  .saveButtonCancel {
+    padding: clamp(3px, 0.8vw, 5px) clamp(8px, 1.5vw, 12px);
+    font-size: clamp(10px, 1.2vw, 12px);
+  }
+  
+  .saveButtonSave {
+    padding: clamp(3px, 0.8vw, 5px) clamp(10px, 2vw, 16px);
+    font-size: clamp(10px, 1.2vw, 12px);
+  }
+}
+
+@media (max-width: 320px) {
+  .saveButtonActions {
+    padding: clamp(4px, 0.8vw, 6px) clamp(6px, 1.2vw, 10px);
+    gap: clamp(4px, 0.8vw, 6px);
+  }
+  
+  .saveButtonCancel {
+    padding: clamp(2px, 0.6vw, 4px) clamp(6px, 1.2vw, 10px);
+    font-size: clamp(9px, 1vw, 11px);
+  }
+  
+  .saveButtonSave {
+    padding: clamp(2px, 0.6vw, 4px) clamp(8px, 1.5vw, 12px);
+    font-size: clamp(9px, 1vw, 11px);
+  }
+} 

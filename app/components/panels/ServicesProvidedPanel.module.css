@@ -1,0 +1,139 @@
+.servicesProvidedPanel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 617px;
+  background: #F8F8F8;
+  border-radius: 6px;
+  z-index: 10;
+  padding: 40px 24px 0 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.servicesProvidedContent {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.servicesProvidedBox {
+  background: #fff;
+  border-radius: 6px;
+  padding: 24px 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+
+.servicesProvidedList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.servicesProvidedOption {
+  display: flex;
+  align-items: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13.3px;
+  color: #000;
+  gap: 10px;
+  min-width: 120px;
+  padding: 6px 0;
+  border-radius: 4px;
+  transition: background 0.15s;
+  cursor: pointer;
+}
+.servicesProvidedOption:hover {
+  background: #f3eafd;
+}
+
+.servicesProvidedOptionCheckbox {
+  width: 20px;
+  height: 20px;
+  accent-color: #a084ca;
+  border-radius: 3px;
+  border: 1px solid #000;
+  margin-right: 8px;
+}
+
+.servicesProvidedNote {
+  font-size: 12px;
+  color: #888;
+  margin-top: 8px;
+}
+
+.stickyActions {
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #EBEBEB 0%, #FFFFFF 100%);
+  padding: 16px 24px;
+  border-radius: 0 0 12px 12px;
+  box-sizing: border-box;
+  z-index: 3;
+  margin-top: 0;
+  border-top: 1px solid #E0E0E0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.sidebar-back-btn {
+  background: none;
+  border: none;
+  color: #000;
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  margin: 6px 0 4px 35px;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+}
+
+.sidebar-back-btn:hover {
+  text-decoration: underline;
+}
+
+.name-heading {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: #21201F;
+  margin-bottom: 4px;
+  margin-top: 0;
+}
+
+.name-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  color: #0E0E0E;
+  margin-bottom: 16px;
+}
+
+.services-provided-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 2px;
+}
+
+.services-provided-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #21201F;
+} 

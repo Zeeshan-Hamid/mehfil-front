@@ -1,0 +1,98 @@
+.proTipBox {
+  background: #F8F8F8;
+  border-radius: 4px;
+  padding: 18px 18px 12px 18px;
+  margin-top: 12px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  transition: padding 0.2s, min-height 0.2s;
+}
+
+.minimizeBtn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.minimizeBtn svg {
+  display: block;
+}
+
+.proTipTitle {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  color: #21201F;
+  margin-bottom: 2px;
+}
+
+.proTipText {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: #767676;
+}
+
+.proTipStrong {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  color: #767676;
+  margin-top: 2px;
+}
+
+.proTipStrongText {
+  font-weight: 700;
+  color: #767676;
+}
+
+.proTipBar {
+  background: #F8F8F8;
+  border-radius: 4px;
+  padding: 8px 18px;
+  margin-top: 12px;
+  margin-bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  min-height: 32px;
+  border: 1px solid #ececec;
+  transition: background 0.2s;
+}
+
+.proTipBar:hover {
+  background: #f0eafd;
+}
+
+.proTipBarLabel {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #767676;
+  letter-spacing: 0.2px;
+}
+
+.proTipBarChevron {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+} 

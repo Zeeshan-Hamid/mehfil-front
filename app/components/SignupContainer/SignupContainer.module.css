@@ -1,0 +1,455 @@
+/* Add SignupContainer-specific styles here */ 
+.signupContainer {
+  /* No base styles, just for targeting in media queries */
+}
+.signupLeftPanel {
+  /* No base styles, just for targeting in media queries */
+}
+.signupRightPanel {
+  /* No base styles, just for targeting in media queries */
+}
+
+/* Custom scrollbar styling */
+.signupRightPanel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.signupRightPanel::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.signupRightPanel::-webkit-scrollbar-thumb {
+  background: rgba(157, 105, 199, 0.6);
+  border-radius: 4px;
+}
+
+.signupRightPanel::-webkit-scrollbar-thumb:hover {
+  background: rgba(157, 105, 199, 0.8);
+}
+
+/* Firefox scrollbar */
+.signupRightPanel {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(157, 105, 199, 0.6) rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 1200px) {
+  .signupContainer {
+    width: 90vw !important;
+    max-width: 900px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .signupContainer {
+    width: 95vw !important;
+    max-width: 900px !important;
+    height: auto !important;
+    min-height: 700px !important;
+    max-height: 95vh !important;
+    min-width: 320px;
+    flex-direction: column !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    border-radius: 18px !important;
+  }
+  .signupLeftPanel {
+    width: 100% !important;
+    min-width: 0;
+    height: auto !important;
+    min-height: 120px;
+    border-radius: 18px 18px 0 0 !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 24px 18px 24px;
+    box-sizing: border-box;
+  }
+  .signupRightPanel {
+    width: 100% !important;
+    min-width: 0;
+    height: auto !important;
+    min-height: 320px;
+    max-height: 60vh !important;
+    border-radius: 0 0 18px 18px !important;
+    padding: 24px 0 0 0;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    overflow-y: auto !important;
+  }
+}
+
+/* Mobile Styles - Fixed for actual component structure */
+@media (max-width: 600px) {
+  .signupContainer {
+    width: 100vw !important;
+    height: 100vh !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    border-radius: 0 !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    background: linear-gradient(135deg, #C4AAD9 0%, #9D69C7 100%);
+    min-height: 100vh !important;
+  }
+
+  /* Mobile scrollbar styling */
+  .signupRightPanel::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .signupRightPanel::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+  }
+  
+  .signupRightPanel::-webkit-scrollbar-thumb {
+    background: rgba(157, 105, 199, 0.6);
+    border-radius: 3px;
+  }
+  
+  .signupRightPanel::-webkit-scrollbar-thumb:hover {
+    background: rgba(157, 105, 199, 0.8);
+  }
+  
+  .signupRightPanel {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(157, 105, 199, 0.6) rgba(255, 255, 255, 0.1);
+  }
+
+  .signupLeftPanel {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 120px !important;
+    max-height: 160px !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 20px 16px 16px 16px !important;
+    box-sizing: border-box !important;
+    margin-bottom: 0 !important;
+  }
+
+  .signupLeftPanel img {
+    width: 60px !important;
+    height: 75px !important;
+    margin-bottom: 8px !important;
+    object-fit: contain !important;
+  }
+
+  .signupLeftPanel .font-outfit.font-medium {
+    font-size: 18px !important;
+    line-height: 22px !important;
+    margin-bottom: 4px !important;
+    margin-top: 0 !important;
+    text-align: center !important;
+    font-weight: 500 !important;
+  }
+
+  .signupLeftPanel .font-outfit.font-normal {
+    font-size: 12px !important;
+    line-height: 16px !important;
+    margin-bottom: 0 !important;
+    max-width: 200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    margin-top: 0 !important;
+    opacity: 0.9 !important;
+  }
+
+  .signupRightPanel {
+    width: 100% !important;
+    height: calc(100vh - 160px) !important;
+    min-height: 0 !important;
+    flex: 1 !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    display: flex !important;
+    overflow-y: auto !important;
+    background: transparent !important;
+  }
+
+  .signupFormCard {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 20px 20px 0 0 !important;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1) !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 24px 20px 60px 20px !important;
+    backdrop-filter: blur(10px) !important;
+    min-height: calc(100vh - 160px) !important;
+  }
+
+  .signupFormCard h1 {
+    font-size: 20px !important;
+    line-height: 24px !important;
+    margin-bottom: 20px !important;
+    margin-top: 0 !important;
+    font-weight: 500 !important;
+  }
+
+  .signupFormCard .space-y-2 > * {
+    margin-bottom: 12px !important;
+  }
+
+  .signupFormCard button {
+    height: 44px !important;
+    font-size: 15px !important;
+    border-radius: 22px !important;
+    margin-top: 16px !important;
+    font-weight: 500 !important;
+  }
+
+  .inputField {
+    height: 44px !important;
+    font-size: 14px !important;
+    padding: 0 16px !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    color: #000 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .signupContainer {
+    width: 100vw !important;
+  }
+  
+  /* Mobile scrollbar styling for smaller screens */
+  .signupRightPanel::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .signupRightPanel::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+  }
+  
+  .signupRightPanel::-webkit-scrollbar-thumb {
+    background: rgba(157, 105, 199, 0.6);
+    border-radius: 2px;
+  }
+  
+  .signupRightPanel::-webkit-scrollbar-thumb:hover {
+    background: rgba(157, 105, 199, 0.8);
+  }
+  
+  .signupRightPanel {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(157, 105, 199, 0.6) rgba(255, 255, 255, 0.1);
+  }
+
+  .signupLeftPanel {
+    padding: 16px 12px 12px 12px !important;
+    min-height: 100px !important;
+    max-height: 140px !important;
+  }
+
+  .signupLeftPanel img {
+    width: 50px !important;
+    height: 62px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .signupLeftPanel .font-outfit.font-medium {
+    font-size: 16px !important;
+    line-height: 20px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .signupLeftPanel .font-outfit.font-normal {
+    font-size: 11px !important;
+    line-height: 14px !important;
+    margin-bottom: 0 !important;
+    max-width: 180px !important;
+  }
+
+  .signupRightPanel {
+    height: calc(100vh - 140px) !important;
+  }
+
+  .signupFormCard {
+    padding: 20px 16px 50px 16px !important;
+    min-height: calc(100vh - 140px) !important;
+  }
+
+  .signupFormCard h1 {
+    font-size: 18px !important;
+    line-height: 22px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .signupFormCard .space-y-2 > * {
+    margin-bottom: 10px !important;
+  }
+
+  .signupFormCard button {
+    height: 40px !important;
+    font-size: 14px !important;
+    margin-top: 14px !important;
+  }
+
+  .inputField {
+    height: 40px !important;
+    font-size: 13px !important;
+    padding: 0 14px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  /* Mobile scrollbar styling for smallest screens */
+  .signupRightPanel::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  .signupRightPanel::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1.5px;
+  }
+  
+  .signupRightPanel::-webkit-scrollbar-thumb {
+    background: rgba(157, 105, 199, 0.6);
+    border-radius: 1.5px;
+  }
+  
+  .signupRightPanel::-webkit-scrollbar-thumb:hover {
+    background: rgba(157, 105, 199, 0.8);
+  }
+  
+  .signupRightPanel {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(157, 105, 199, 0.6) rgba(255, 255, 255, 0.1);
+  }
+
+  .signupLeftPanel {
+    padding: 12px 8px 8px 8px !important;
+    min-height: 80px !important;
+    max-height: 120px !important;
+  }
+
+  .signupLeftPanel img {
+    width: 40px !important;
+    height: 50px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .signupLeftPanel .font-outfit.font-medium {
+    font-size: 14px !important;
+    line-height: 18px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .signupLeftPanel .font-outfit.font-normal {
+    font-size: 10px !important;
+    line-height: 12px !important;
+    max-width: 150px !important;
+  }
+
+  .signupRightPanel {
+    height: calc(100vh - 120px) !important;
+  }
+
+  .signupFormCard {
+    padding: 16px 12px 40px 12px !important;
+    min-height: calc(100vh - 120px) !important;
+  }
+
+  .signupFormCard h1 {
+    font-size: 16px !important;
+    line-height: 20px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .signupFormCard .space-y-2 > * {
+    margin-bottom: 8px !important;
+  }
+
+  .signupFormCard button {
+    height: 36px !important;
+    font-size: 13px !important;
+    margin-top: 12px !important;
+  }
+
+  .inputField {
+    height: 36px !important;
+    font-size: 12px !important;
+    padding: 0 12px !important;
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 600px) and (orientation: landscape) {
+  .signupContainer {
+    height: 100vh !important;
+  }
+
+  .signupLeftPanel {
+    min-height: 80px !important;
+    max-height: 100px !important;
+    padding: 12px 16px 8px 16px !important;
+  }
+
+  .signupLeftPanel img {
+    width: 40px !important;
+    height: 50px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .signupLeftPanel .font-outfit.font-medium {
+    font-size: 14px !important;
+    line-height: 18px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .signupLeftPanel .font-outfit.font-normal {
+    font-size: 10px !important;
+    line-height: 12px !important;
+    max-width: 150px !important;
+  }
+
+  .signupRightPanel {
+    height: calc(100vh - 100px) !important;
+  }
+
+  .signupFormCard {
+    padding: 16px 20px 40px 20px !important;
+    min-height: calc(100vh - 100px) !important;
+  }
+
+  .signupFormCard h1 {
+    font-size: 18px !important;
+    line-height: 22px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .signupFormCard .space-y-2 > * {
+    margin-bottom: 8px !important;
+  }
+
+  .signupFormCard button {
+    height: 40px !important;
+    font-size: 14px !important;
+    margin-top: 12px !important;
+  }
+
+  .inputField {
+    height: 40px !important;
+    font-size: 13px !important;
+    padding: 0 14px !important;
+  }
+} 

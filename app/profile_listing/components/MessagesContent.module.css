@@ -1,0 +1,226 @@
+/* MessagesContent.module.css */
+
+/* Container */
+.messagesContainer {
+  display: flex;
+  height: calc(100vh - clamp(80px, 15vw, 120px));
+  background: #f8f9fa;
+  border-radius: clamp(8px, 2vw, 12px);
+  overflow: hidden;
+  margin: clamp(1rem, 3vw, 1.5rem);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+/* Mobile responsive bottom padding */
+@media (max-width: 600px) {
+  .messagesContainer {
+    margin-bottom: clamp(2rem, 6vh, 3rem);
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+  .messagesContainer {
+    flex-direction: column;
+    height: calc(100vh - clamp(60px, 12vw, 100px));
+    margin: clamp(0.5rem, 2vw, 1rem);
+  }
+}
+
+/* Sidebar Container */
+.sidebarContainer {
+  width: clamp(280px, 30vw, 350px);
+  min-width: clamp(280px, 30vw, 350px);
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .sidebarContainer {
+    width: 100%;
+    min-width: 100%;
+    height: 50vh;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+}
+
+/* Chat Container */
+.chatContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  height: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .chatContainer {
+    height: 50vh;
+  }
+}
+
+/* Loading State */
+.loadingContainer {
+  display: flex;
+  height: calc(100vh - clamp(80px, 15vw, 120px));
+  background: #f8f9fa;
+  border-radius: clamp(8px, 2vw, 12px);
+  margin: clamp(1rem, 3vw, 1.5rem);
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .loadingContainer {
+    height: calc(100vh - clamp(60px, 12vw, 100px));
+    margin: clamp(0.5rem, 2vw, 1rem);
+  }
+}
+
+/* Error State */
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - clamp(80px, 15vw, 120px));
+  background: #f8f9fa;
+  border-radius: clamp(8px, 2vw, 12px);
+  margin: clamp(1rem, 3vw, 1.5rem);
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 3vw, 1.5rem);
+}
+
+@media (max-width: 768px) {
+  .errorContainer {
+    height: calc(100vh - clamp(60px, 12vw, 100px));
+    margin: clamp(0.5rem, 2vw, 1rem);
+  }
+}
+
+.errorMessage {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  color: #d32f2f;
+  text-align: center;
+  padding: 0 clamp(1rem, 3vw, 1.5rem);
+}
+
+.retryButton {
+  padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
+  background: #AF8EBA;
+  color: white;
+  border: none;
+  border-radius: clamp(4px, 1.5vw, 6px);
+  cursor: pointer;
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+  transition: all 0.2s ease;
+}
+
+.retryButton:hover {
+  background: #9a7ba8;
+  transform: translateY(-1px);
+}
+
+/* Mobile Navigation */
+.mobileNav {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  padding: clamp(0.5rem, 2vw, 0.75rem);
+}
+
+@media (max-width: 768px) {
+  .mobileNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.mobileBackButton {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 2vw, 0.75rem);
+  background: none;
+  border: none;
+  color: #AF8EBA;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  cursor: pointer;
+  padding: clamp(0.25rem, 1vw, 0.5rem);
+  border-radius: clamp(4px, 1.5vw, 6px);
+  transition: background-color 0.2s ease;
+}
+
+.mobileBackButton:hover {
+  background: rgba(175, 142, 186, 0.1);
+}
+
+.mobileBackIcon {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+.mobileTitle {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  font-weight: 600;
+  color: #333;
+}
+
+.mobileActions {
+  display: flex;
+  gap: clamp(0.5rem, 2vw, 0.75rem);
+}
+
+.mobileActionButton {
+  background: none;
+  border: none;
+  color: #666;
+  padding: clamp(0.25rem, 1vw, 0.5rem);
+  border-radius: clamp(4px, 1.5vw, 6px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mobileActionButton:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #333;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 480px) {
+  .messagesContainer {
+    margin: 0;
+    border-radius: 0;
+    height: 100vh;
+  }
+  
+  .loadingContainer,
+  .errorContainer {
+    margin: 0;
+    border-radius: 0;
+    height: 100vh;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .messagesContainer {
+    margin: clamp(0.75rem, 2.5vw, 1.25rem);
+  }
+}
+
+@media (min-width: 1025px) {
+  .messagesContainer {
+    margin: clamp(1.25rem, 4vw, 2rem);
+  }
+} 

@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 20C8 15.0294 14.268 12 24 12C33.732 12 40 15.0294 40 20V28C40 32.9706 33.732 36 24 36C22.964 36 21.963 35.943 21 35.837V40L14.5 35.5C10.5 33 8 30.5 8 28V20Z" fill="#AF8EBA"/>
+  <!-- 3 dots for typing indicator -->
+  <circle cx="19" cy="25" r="2" fill="white"/>
+  <circle cx="24" cy="25" r="2" fill="white"/>
+  <circle cx="29" cy="25" r="2" fill="white"/>
+</svg> 

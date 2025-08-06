@@ -1,0 +1,275 @@
+/* Add Navbar_Other-specific styles here */
+
+.navbar {
+  --primary-bg: #AF8EBA;
+  --secondary-bg: #9CAD89;
+  --accent-bg: #FFEBEC;
+  --text-white: #FFFFFF;
+  --text-black: #000000;
+  --shadow: 0px 4px 11.1px rgba(0, 0, 0, 0.12);
+  --border-radius: 90px;
+  --font-main: 'Outfit', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  --navbar-height: clamp(60px, 6vh, 72px);
+  --navbar-padding: calc(var(--navbar-height) * 0.25);
+  --logo-height: calc(var(--navbar-height) * 0.5);
+  --logo-width: calc(var(--logo-height) * 0.78);
+  --brand-font-size: calc(var(--navbar-height) * 0.25);
+  --nav-font-size: calc(var(--navbar-height) * 0.23);
+  --button-height: calc(var(--navbar-height) * 0.45);
+  --button-font-size: calc(var(--button-height) * 0.2);
+  --button-padding-x: calc(var(--button-height) * 0.8);
+  --icon-size: calc(var(--navbar-height) * 0.28);
+  --icon-gap: calc(var(--navbar-height) * 0.2);
+  --section-gap: calc(var(--navbar-height) * 0.4);
+  
+  position: relative;
+  width: 100%;
+  height: var(--navbar-height);
+  background: var(--primary-bg);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 0 var(--navbar-padding);
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--navbar-height) * 0.12);
+}
+
+.logo {
+  width: var(--logo-width);
+  height: var(--logo-height);
+  object-fit: contain;
+}
+
+.brandName {
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  font-size: var(--brand-font-size);
+  line-height: 1.2;
+  color: var(--text-white);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: var(--section-gap);
+}
+
+.navLink {
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: var(--nav-font-size);
+  line-height: 1.3;
+  color: var(--text-white);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.navLink:hover {
+  opacity: 0.8;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: var(--section-gap);
+}
+
+.rightActions {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--navbar-height) * 0.15);
+}
+
+.loginButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--button-height) * 0.2) var(--button-padding-x);
+  min-width: calc(var(--button-height) * 2.2);
+  height: var(--button-height);
+  background: var(--primary-bg);
+  border: 1px solid var(--text-white);
+  border-radius: 44px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.loginButton:hover {
+  background: #9b6eb5;
+}
+
+.signupButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--button-height) * 0.2) var(--button-padding-x);
+  min-width: calc(var(--button-height) * 2.4);
+  height: var(--button-height);
+  background: var(--secondary-bg);
+  border-radius: 44px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.signupButton:hover {
+  background: #7e9c6b;
+}
+
+.vendorButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--button-height) * 0.2) var(--button-padding-x);
+  min-width: calc(var(--button-height) * 3.2);
+  height: var(--button-height);
+  background: var(--accent-bg);
+  border-radius: 44px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.vendorButton:hover {
+  background: #ffd6db;
+}
+
+.buttonText {
+  font-family: var(--font-main);
+  font-weight: 500;
+  font-size: var(--button-font-size);
+  color: var(--text-white);
+  white-space: nowrap;
+}
+
+.vendorButtonText {
+  font-family: var(--font-main);
+  font-weight: 500;
+  font-size: var(--button-font-size);
+  color: var(--text-black);
+  white-space: nowrap;
+}
+
+.iconsSection {
+  display: flex;
+  align-items: center;
+  gap: var(--icon-gap);
+}
+
+.iconWrapper {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.iconWrapper:hover {
+  transform: scale(1.1);
+}
+
+.icon {
+  width: calc(var(--icon-size) * 0.85);
+  height: calc(var(--icon-size) * 0.85);
+  object-fit: contain;
+}
+
+/* Non-interactive styles for preview mode */
+.nonInteractive {
+  cursor: default !important;
+  pointer-events: none;
+}
+
+.nonInteractive:hover {
+  opacity: 1 !important;
+  background: inherit !important;
+  transform: none !important;
+}
+
+/* Responsive breakpoints for layout changes */
+@media (max-width: 1200px) {
+  .navbar {
+    --navbar-padding: calc(var(--navbar-height) * 0.2);
+    --section-gap: calc(var(--navbar-height) * 0.3);
+  }
+  
+  .rightActions {
+    gap: calc(var(--navbar-height) * 0.12);
+  }
+  
+  .iconsSection {
+    gap: calc(var(--navbar-height) * 0.15);
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    --navbar-height: clamp(80px, 8vh, 96px);
+    --navbar-padding: calc(var(--navbar-height) * 0.15);
+    --section-gap: calc(var(--navbar-height) * 0.25);
+  }
+  
+  .navbarContainer {
+    flex-wrap: wrap;
+    gap: calc(var(--navbar-height) * 0.08);
+    padding: calc(var(--navbar-height) * 0.1) var(--navbar-padding);
+  }
+  
+  .navLinks {
+    order: 3;
+    flex-basis: 100%;
+    justify-content: center;
+    gap: calc(var(--navbar-height) * 0.2);
+  }
+  
+  .rightActions {
+    gap: calc(var(--navbar-height) * 0.1);
+  }
+  
+  .iconsSection {
+    gap: calc(var(--navbar-height) * 0.12);
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    --navbar-height: clamp(70px, 10vh, 88px);
+    --navbar-padding: calc(var(--navbar-height) * 0.18);
+  }
+  
+  .navbarContainer {
+    flex-direction: column;
+    gap: calc(var(--navbar-height) * 0.08);
+    padding: calc(var(--navbar-height) * 0.12) var(--navbar-padding);
+  }
+  
+  .logoSection {
+    gap: calc(var(--navbar-height) * 0.08);
+  }
+  
+  .navLinks {
+    gap: calc(var(--navbar-height) * 0.18);
+  }
+  
+  .rightSection {
+    gap: calc(var(--navbar-height) * 0.15);
+  }
+  
+  .rightActions {
+    gap: calc(var(--navbar-height) * 0.08);
+  }
+  
+  .iconsSection {
+    gap: calc(var(--navbar-height) * 0.08);
+  }
+} 

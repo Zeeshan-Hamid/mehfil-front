@@ -1,0 +1,212 @@
+.heroSection {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  overflow: visible;
+}
+
+.heroBgImage {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.heroBgImageImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20.2px);
+  z-index: 2;
+}
+
+.heroFrontFlower {
+  position: absolute;
+  width: 60vw;
+  height: 90vh;
+  right: 0vw;
+  top: 15vh;
+  z-index: 15;
+  pointer-events: none;
+}
+
+.heroFrontFlowerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: rotate(180deg) scaleX(-1) scaleY(-1);
+}
+
+.hero-content {
+  position: absolute;
+  width: min(686px, 80vw);
+  height: auto;
+  left: clamp(20px, 8vw, 120px);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+}
+
+.hero-title {
+  width: 100%;
+  height: auto;
+  font-family: 'Playfair Display', serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: clamp(28px, 4vw, 52px);
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(95.54deg, #FFFFFF -18.32%, #FEEAEA 127.08%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 clamp(16px, 2vw, 24px) 0;
+}
+
+.hero-subtitle {
+  width: 100%;
+  height: auto;
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(14px, 1.5vw, 18px);
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  margin: 0 0 clamp(24px, 3vw, 40px) 0;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(16px, 2vw, 25px);
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(10px, 1.5vw, 12px) clamp(24px, 2.5vw, 38px);
+  gap: 10px;
+  border-radius: 44px;
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(12px, 1.2vw, 16px);
+  line-height: 100%;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+}
+
+.get-started-btn {
+  background: #AF8EBA;
+  color: #FFFFFF !important;
+}
+
+.join-vendor-btn {
+  background: #9CAD88;
+  color: #FFFFFF !important;
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    height: 100vh;
+    min-height: 600px;
+  }
+  
+  .heroFrontFlower {
+    width: 80vw;
+    height: 60vh;
+    right: -10vw;
+    top: 20vh;
+    opacity: 0.6;
+    z-index: 3;
+  }
+  
+  .hero-content {
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    width: 90vw;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  .hero-title {
+    font-size: clamp(32px, 8vw, 48px);
+    margin-bottom: 20px;
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(16px, 4vw, 20px);
+    margin-bottom: 30px;
+    line-height: 1.4;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-btn {
+    width: 100%;
+    max-width: 280px;
+    padding: 15px 30px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    height: 100vh;
+    min-height: 500px;
+  }
+  
+  .heroFrontFlower {
+    width: 90vw;
+    height: 50vh;
+    right: -15vw;
+    top: 25vh;
+    opacity: 0.4;
+  }
+  
+  .hero-content {
+    width: 95vw;
+    padding: 0 15px;
+  }
+  
+  .hero-title {
+    font-size: clamp(28px, 10vw, 40px);
+    margin-bottom: 16px;
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(14px, 4.5vw, 18px);
+    margin-bottom: 25px;
+  }
+  
+  .hero-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+} 

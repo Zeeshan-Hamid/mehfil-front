@@ -1,0 +1,25 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #fff;
+  font-family: 'Outfit', 'Roboto', Arial, sans-serif;
+}
+
+.messagesContainer {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  margin-top: clamp(60px, 8vw, 90px); /* Add margin to start below navbar */
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .messagesContainer {
+    flex-direction: column;
+    height: 100vh;
+    margin-top: clamp(50px, 6vw, 80px); /* Adjust for mobile navbar height */
+  }
+} 

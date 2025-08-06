@@ -1,0 +1,402 @@
+/* Base styles and responsive container */
+.pageWrapper {
+    padding: clamp(1rem, 4vw, 2.5rem);
+    background-color: #FAFAFB;
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Loading and Error States */
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 2rem;
+    text-align: center;
+}
+
+.loadingText {
+    margin-top: 1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    color: #666;
+    font-weight: 500;
+}
+
+.errorCard {
+    background: white;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    max-width: 500px;
+    width: 100%;
+}
+
+.errorCard h3 {
+    color: #ef4444;
+    margin-bottom: 0.5rem;
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+}
+
+.errorCard p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+.spinner {
+    border: 4px solid rgba(0,0,0,0.1);
+    width: clamp(32px, 8vw, 48px);
+    height: clamp(32px, 8vw, 48px);
+    border-radius: 50%;
+    border-left-color: #AF8EBA;
+    animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 3vw, 1.5rem);
+    margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.backButton {
+    background: none;
+    border: none;
+    color: #AF8EBA;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    transition: color 0.2s ease;
+}
+
+.backButton:hover {
+    color: #9a7da6;
+}
+
+.backIcon {
+    font-size: 1.2em;
+}
+
+.backText {
+    display: none;
+}
+
+@media (min-width: 480px) {
+    .backText {
+        display: inline;
+    }
+}
+
+.mainTitle {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .mainTitle {
+        text-align: left;
+    }
+}
+
+/* Summary Grid */
+.summaryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: clamp(1rem, 3vw, 1.5rem);
+    margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.summaryCard {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: clamp(1rem, 3vw, 1.5rem);
+    display: flex;
+    align-items: center;
+    gap: clamp(0.75rem, 2vw, 1rem);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.summaryCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.summaryIcon {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    flex-shrink: 0;
+}
+
+.summaryText {
+    flex: 1;
+    min-width: 0;
+}
+
+.summaryLabel {
+    font-weight: 500;
+    color: #888;
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+    margin-bottom: 0.25rem;
+}
+
+.summaryValue {
+    font-weight: 600;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    color: #333;
+    word-break: break-word;
+}
+
+/* Details Grid */
+.detailsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1.5rem, 4vw, 2rem);
+}
+
+@media (min-width: 768px) {
+    .detailsGrid {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 4vw, 2rem);
+}
+
+.infoCard {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: clamp(1.25rem, 4vw, 1.75rem);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.infoCard:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.cardTitle {
+    font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+    font-weight: 600;
+    color: #AF8EBA;
+    margin-bottom: clamp(1rem, 3vw, 1.5rem);
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* Info Items */
+.infoItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: clamp(0.75rem, 2vw, 1rem);
+}
+
+@media (min-width: 480px) {
+    .infoItem {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.infoLabel {
+    font-weight: 600;
+    color: #555;
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+    min-width: fit-content;
+}
+
+.infoValue {
+    color: #333;
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+    word-break: break-word;
+    text-align: right;
+}
+
+@media (min-width: 480px) {
+    .infoValue {
+        text-align: left;
+        flex: 1;
+        margin-left: 1rem;
+    }
+}
+
+/* Status Update Section */
+.statusUpdateWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 3vw, 1.5rem);
+}
+
+.statusSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+@media (min-width: 480px) {
+    .statusSection {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.statusLabel {
+    font-weight: 600;
+    color: #555;
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+}
+
+.statusControls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+@media (min-width: 480px) {
+    .statusControls {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.statusBadge {
+    padding: clamp(0.4rem, 1.5vw, 0.6rem) clamp(0.8rem, 2.5vw, 1rem);
+    border-radius: 20px;
+    font-weight: 600;
+    color: #fff;
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+    text-align: center;
+    display: inline-block;
+    min-width: fit-content;
+}
+
+.statusSelect {
+    padding: clamp(0.6rem, 2vw, 0.8rem) clamp(0.8rem, 2.5vw, 1rem);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+    flex: 1;
+    min-width: 0;
+}
+
+.statusSelect:focus {
+    outline: none;
+    border-color: #AF8EBA;
+    box-shadow: 0 0 0 2px rgba(175, 142, 186, 0.1);
+}
+
+.updateButton {
+    padding: clamp(0.6rem, 2vw, 0.8rem) clamp(1rem, 3vw, 1.25rem);
+    border-radius: 8px;
+    border: none;
+    background-color: #AF8EBA;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+    white-space: nowrap;
+    min-width: fit-content;
+}
+
+.updateButton:hover:not(:disabled) {
+    background-color: #9a7da6;
+    transform: translateY(-1px);
+}
+
+.updateButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Status Colors */
+.pending {
+    background-color: #f59e0b;
+}
+
+.confirmed {
+    background-color: #10b981;
+}
+
+.cancelled {
+    background-color: #ef4444;
+}
+
+.completed {
+    background-color: #3b82f6;
+}
+
+/* Responsive adjustments for very small screens */
+@media (max-width: 360px) {
+    .pageWrapper {
+        padding: 0.75rem;
+    }
+    
+    .summaryGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .summaryCard {
+        padding: 1rem;
+    }
+    
+    .infoCard {
+        padding: 1rem;
+    }
+}
+
+/* Tablet optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .summaryGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large screen optimizations */
+@media (min-width: 1200px) {
+    .pageWrapper {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    .summaryGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+} 

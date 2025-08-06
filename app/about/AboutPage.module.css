@@ -1,0 +1,727 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Roboto:wght@500&family=Playfair+Display:wght@800&display=swap');
+
+/* About Page Styles */
+.aboutPage {
+  width: 100%;
+  min-height: 100vh;
+  background: #FFFFFF;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  width: 100vw;
+  height: clamp(60vh, 70vh, 80vh);
+  overflow: visible;
+}
+
+.heroBgImage {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.heroBgImageImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20.2px);
+  z-index: 2;
+}
+
+.heroFrontFlower {
+  position: absolute;
+  width: clamp(40vw, 50vw, 60vw);
+  height: clamp(50vh, 60vh, 70vh);
+  right: 0vw;
+  top: clamp(10vh, 15vh, 20vh);
+  z-index: 15;
+  pointer-events: none;
+}
+
+.heroFrontFlowerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: rotate(180deg) scaleX(-1) scaleY(-1);
+}
+
+.heroContent {
+  position: absolute;
+  width: min(686px, 80vw);
+  height: auto;
+  left: clamp(20px, 8vw, 120px);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+}
+
+.heroTitle {
+  width: 100%;
+  height: auto;
+  font-family: 'Playfair Display', serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: clamp(32px, 5vw, 64px);
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(95.54deg, #FFFFFF -18.32%, #FEEAEA 127.08%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 clamp(16px, 2vw, 24px) 0;
+}
+
+.heroSubtitle {
+  width: 100%;
+  height: auto;
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(16px, 1.8vw, 20px);
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  margin: 0;
+  max-width: clamp(400px, 60vw, 600px);
+}
+
+/* Story Section */
+.storySection {
+  padding: clamp(60px, 8vw, 120px) clamp(20px, 4vw, 40px);
+  background: #FFFFFF;
+}
+
+.storyContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+
+.storyContent {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 3vw, 32px);
+}
+
+.sectionTitle {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 40px);
+  color: #1F2937;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.storyText {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(16px, 2vw, 18px);
+  color: #6B7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.storyImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.storyImg {
+  width: 100%;
+  height: auto;
+  border-radius: clamp(12px, 2vw, 16px);
+  box-shadow: 0 clamp(8px, 2vw, 16px) clamp(24px, 4vw, 32px) rgba(0, 0, 0, 0.1);
+}
+
+/* Mission Section */
+.missionSection {
+  padding: clamp(60px, 8vw, 120px) clamp(20px, 4vw, 40px);
+  background: #F9FAFB;
+}
+
+.missionContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+}
+
+.missionCard {
+  background: #FFFFFF;
+  padding: clamp(32px, 5vw, 48px);
+  border-radius: clamp(12px, 2vw, 16px);
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 clamp(4px, 1vw, 8px) clamp(16px, 3vw, 24px) rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2.5vw, 24px);
+}
+
+.missionCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 clamp(8px, 2vw, 16px) clamp(32px, 6vw, 48px) rgba(0, 0, 0, 0.1);
+}
+
+.missionIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(60px, 8vw, 80px);
+  height: clamp(60px, 8vw, 80px);
+  background: #AF8EBA;
+  border-radius: 50%;
+  margin-bottom: clamp(8px, 1.5vw, 12px);
+}
+
+.missionTitle {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(24px, 3.5vw, 32px);
+  color: #1F2937;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.missionText {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(16px, 2vw, 18px);
+  color: #6B7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Values Section */
+.valuesSection {
+  padding: clamp(60px, 8vw, 120px) clamp(20px, 4vw, 40px);
+  background: #FFFFFF;
+}
+
+.valuesContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(280px, 40vw, 400px), 1fr));
+  gap: clamp(24px, 4vw, 32px);
+  margin-top: clamp(40px, 6vw, 60px);
+}
+
+.valueCard {
+  background: #FFFFFF;
+  padding: clamp(24px, 4vw, 32px);
+  border-radius: clamp(12px, 2vw, 16px);
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 clamp(4px, 1vw, 8px) clamp(16px, 3vw, 24px) rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2.5vw, 24px);
+}
+
+.valueCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 clamp(8px, 2vw, 16px) clamp(32px, 6vw, 48px) rgba(0, 0, 0, 0.1);
+}
+
+.valueIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(48px, 6vw, 64px);
+  height: clamp(48px, 6vw, 64px);
+  background: #AF8EBA;
+  border-radius: 50%;
+  margin-bottom: clamp(8px, 1.5vw, 12px);
+}
+
+.valueTitle {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: clamp(18px, 2.5vw, 20px);
+  color: #1F2937;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.valueText {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(14px, 1.8vw, 16px);
+  color: #6B7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Statistics Section */
+.statsSection {
+  padding: clamp(60px, 8vw, 120px) clamp(20px, 4vw, 40px);
+  background: #AF8EBA;
+  color: #FFFFFF;
+}
+
+.statsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.statsSection .sectionTitle {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 35vw, 300px), 1fr));
+  gap: clamp(24px, 4vw, 32px);
+  margin-top: clamp(40px, 6vw, 60px);
+}
+
+.statCard {
+  background: rgba(255, 255, 255, 0.1);
+  padding: clamp(24px, 4vw, 32px);
+  border-radius: clamp(12px, 2vw, 16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.statNumber {
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  font-size: clamp(32px, 5vw, 48px);
+  color: #FFFFFF;
+  margin-bottom: clamp(8px, 1.5vw, 12px);
+  line-height: 1.1;
+}
+
+.statLabel {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: clamp(18px, 2.5vw, 20px);
+  color: #FFFFFF;
+  margin-bottom: clamp(8px, 1.5vw, 12px);
+}
+
+.statDescription {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(14px, 1.8vw, 16px);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Team Section */
+.teamSection {
+  padding: clamp(60px, 8vw, 120px) clamp(20px, 4vw, 40px);
+  background: #FFFFFF;
+}
+
+.teamContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.teamSubtitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(16px, 2vw, 18px);
+  color: #6B7280;
+  text-align: center;
+  margin: clamp(16px, 2.5vw, 24px) 0 clamp(40px, 6vw, 60px) 0;
+  line-height: 1.6;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(280px, 40vw, 350px), 1fr));
+  gap: clamp(32px, 5vw, 48px);
+}
+
+.teamCard {
+  background: #FFFFFF;
+  padding: clamp(24px, 4vw, 32px);
+  border-radius: clamp(12px, 2vw, 16px);
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 clamp(4px, 1vw, 8px) clamp(16px, 3vw, 24px) rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2.5vw, 24px);
+}
+
+.teamCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 clamp(8px, 2vw, 16px) clamp(32px, 6vw, 48px) rgba(0, 0, 0, 0.1);
+}
+
+.teamImage {
+  display: flex;
+  justify-content: center;
+  margin-bottom: clamp(8px, 1.5vw, 12px);
+}
+
+.teamImg {
+  width: clamp(120px, 20vw, 200px);
+  height: clamp(120px, 20vw, 200px);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #AF8EBA;
+}
+
+.teamName {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: clamp(20px, 3vw, 24px);
+  color: #1F2937;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.teamRole {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: clamp(16px, 2.2vw, 18px);
+  color: #AF8EBA;
+  margin: 0;
+}
+
+.teamBio {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(14px, 1.8vw, 16px);
+  color: #6B7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: clamp(60px, 8vw, 120px) clamp(20px, 4vw, 40px);
+  background: #F9FAFB;
+}
+
+.ctaContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ctaTitle {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 40px);
+  color: #1F2937;
+  margin: 0 0 clamp(16px, 2.5vw, 24px) 0;
+  line-height: 1.2;
+}
+
+.ctaSubtitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(16px, 2vw, 18px);
+  color: #6B7280;
+  line-height: 1.6;
+  margin: 0 0 clamp(32px, 5vw, 48px) 0;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: clamp(16px, 2.5vw, 24px);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  background: #AF8EBA;
+  color: #FFFFFF;
+  border: none;
+  border-radius: clamp(8px, 1.5vw, 12px);
+  padding: clamp(14px, 2.5vw, 18px) clamp(24px, 4vw, 32px);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: clamp(16px, 2.2vw, 18px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 clamp(2px, 0.5vw, 4px) clamp(8px, 1.5vw, 16px) rgba(175, 142, 186, 0.3);
+}
+
+.ctaButton:hover {
+  background: #9a7da6;
+  transform: translateY(-2px);
+  box-shadow: 0 clamp(4px, 1vw, 8px) clamp(16px, 3vw, 24px) rgba(175, 142, 186, 0.4);
+}
+
+.ctaButtonSecondary {
+  background: transparent;
+  color: #AF8EBA;
+  border: 2px solid #AF8EBA;
+  box-shadow: none;
+}
+
+.ctaButtonSecondary:hover {
+  background: #AF8EBA;
+  color: #FFFFFF;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .storyContainer {
+    grid-template-columns: 1fr;
+    gap: clamp(40px, 6vw, 60px);
+  }
+  
+  .missionContainer {
+    grid-template-columns: 1fr;
+    gap: clamp(32px, 5vw, 48px);
+  }
+  
+  .heroFrontFlower {
+    width: clamp(35vw, 45vw, 55vw);
+    height: clamp(45vh, 55vh, 65vh);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    height: clamp(50vh, 60vh, 70vh);
+  }
+  
+  .heroContent {
+    left: clamp(15px, 5vw, 80px);
+    width: min(500px, 85vw);
+  }
+  
+  .heroTitle {
+    font-size: clamp(28px, 6vw, 48px);
+  }
+  
+  .heroSubtitle {
+    font-size: clamp(14px, 2.5vw, 18px);
+  }
+  
+  .heroFrontFlower {
+    width: clamp(30vw, 40vw, 50vw);
+    height: clamp(40vh, 50vh, 60vh);
+    top: clamp(8vh, 12vh, 16vh);
+  }
+  
+  .storySection,
+  .missionSection,
+  .valuesSection,
+  .statsSection,
+  .teamSection,
+  .ctaSection {
+    padding: clamp(40px, 6vw, 80px) clamp(15px, 3vw, 30px);
+  }
+  
+  .sectionTitle {
+    font-size: clamp(24px, 5vw, 32px);
+  }
+  
+  .storyText,
+  .missionText {
+    font-size: clamp(15px, 2.2vw, 17px);
+  }
+  
+  .valuesGrid {
+    grid-template-columns: 1fr;
+    gap: clamp(20px, 3vw, 28px);
+  }
+  
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(20px, 3vw, 28px);
+  }
+  
+  .teamGrid {
+    grid-template-columns: 1fr;
+    gap: clamp(24px, 4vw, 32px);
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    height: clamp(45vh, 55vh, 65vh);
+  }
+  
+  .heroContent {
+    left: clamp(10px, 4vw, 60px);
+    width: min(400px, 90vw);
+  }
+  
+  .heroTitle {
+    font-size: clamp(24px, 7vw, 36px);
+  }
+  
+  .heroSubtitle {
+    font-size: clamp(13px, 3vw, 16px);
+  }
+  
+  .heroFrontFlower {
+    width: clamp(25vw, 35vw, 45vw);
+    height: clamp(35vh, 45vh, 55vh);
+    top: clamp(6vh, 10vh, 14vh);
+  }
+  
+  .storySection,
+  .missionSection,
+  .valuesSection,
+  .statsSection,
+  .teamSection,
+  .ctaSection {
+    padding: clamp(30px, 5vw, 60px) clamp(10px, 2.5vw, 20px);
+  }
+  
+  .storyContainer,
+  .missionContainer {
+    gap: clamp(24px, 4vw, 32px);
+  }
+  
+  .sectionTitle {
+    font-size: clamp(20px, 6vw, 28px);
+  }
+  
+  .storyText,
+  .missionText {
+    font-size: clamp(14px, 2.5vw, 16px);
+  }
+  
+  .missionCard,
+  .valueCard,
+  .statCard,
+  .teamCard {
+    padding: clamp(16px, 3vw, 24px);
+  }
+  
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: clamp(16px, 2.5vw, 24px);
+  }
+  
+  .statNumber {
+    font-size: clamp(28px, 6vw, 40px);
+  }
+  
+  .statLabel {
+    font-size: clamp(16px, 3vw, 18px);
+  }
+  
+  .statDescription {
+    font-size: clamp(13px, 2vw, 15px);
+  }
+  
+  .ctaTitle {
+    font-size: clamp(20px, 6vw, 28px);
+  }
+  
+  .ctaSubtitle {
+    font-size: clamp(14px, 2.5vw, 16px);
+  }
+  
+  .ctaButton {
+    padding: clamp(12px, 2.2vw, 16px) clamp(20px, 3.5vw, 28px);
+    font-size: clamp(14px, 2.5vw, 16px);
+  }
+}
+
+@media (max-width: 360px) {
+  .heroSection {
+    height: clamp(40vh, 50vh, 60vh);
+  }
+  
+  .heroContent {
+    left: clamp(8px, 3vw, 50px);
+    width: min(350px, 92vw);
+  }
+  
+  .heroTitle {
+    font-size: clamp(20px, 8vw, 32px);
+  }
+  
+  .heroSubtitle {
+    font-size: clamp(12px, 3.5vw, 15px);
+  }
+  
+  .heroFrontFlower {
+    width: clamp(20vw, 30vw, 40vw);
+    height: clamp(30vh, 40vh, 50vh);
+    top: clamp(4vh, 8vh, 12vh);
+  }
+  
+  .storySection,
+  .missionSection,
+  .valuesSection,
+  .statsSection,
+  .teamSection,
+  .ctaSection {
+    padding: clamp(25px, 4vw, 50px) clamp(8px, 2vw, 16px);
+  }
+  
+  .sectionTitle {
+    font-size: clamp(18px, 7vw, 24px);
+  }
+  
+  .storyText,
+  .missionText {
+    font-size: clamp(13px, 2.8vw, 15px);
+  }
+  
+  .missionCard,
+  .valueCard,
+  .statCard,
+  .teamCard {
+    padding: clamp(12px, 2.5vw, 20px);
+  }
+  
+  .valueTitle,
+  .teamName {
+    font-size: clamp(16px, 3.5vw, 18px);
+  }
+  
+  .valueText,
+  .teamBio {
+    font-size: clamp(12px, 2.2vw, 14px);
+  }
+  
+  .ctaTitle {
+    font-size: clamp(18px, 7vw, 24px);
+  }
+  
+  .ctaSubtitle {
+    font-size: clamp(13px, 2.8vw, 15px);
+  }
+  
+  .ctaButton {
+    padding: clamp(10px, 2vw, 14px) clamp(16px, 3vw, 24px);
+    font-size: clamp(13px, 2.8vw, 15px);
+  }
+} 

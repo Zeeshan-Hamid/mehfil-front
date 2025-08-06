@@ -1,0 +1,477 @@
+.details-page-container {
+  padding-top: clamp(80px, 12vw, 120px);
+  width: 100%;
+  min-height: 100vh;
+  background: #FFFFFF;
+  overflow-x: hidden;
+}
+
+/* Main content sections */
+.main-section {
+  width: 100%;
+  padding: clamp(20px, 4vw, 40px) clamp(15px, 3vw, 5vw) 0 clamp(15px, 3vw, 5vw);
+}
+
+.content-section {
+  width: 100%;
+  padding: 0 clamp(15px, 3vw, 5vw);
+}
+
+/* Header section with title and actions */
+.header-section {
+  margin-top: clamp(20px, 3vw, 32px);
+}
+
+.title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: clamp(16px, 2.5vw, 24px);
+  margin-bottom: clamp(12px, 2vw, 20px);
+}
+
+.vendor-title {
+  font-weight: 600;
+  font-size: clamp(20px, 4vw, 32px);
+  color: #000;
+  line-height: 1.2;
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+.vendor-by-text {
+  font-size: clamp(14px, 2.5vw, 18px);
+  color: #666;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  margin: clamp(4px, 1vw, 8px) 0 clamp(8px, 1.5vw, 16px) 0;
+}
+
+.vendor-link {
+  color: #AF8EBA;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.vendor-link:hover {
+  color: #9a7da6;
+}
+
+.actions-row {
+  display: flex;
+  gap: clamp(12px, 2vw, 24px);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.message-btn {
+  display: flex;
+  align-items: center;
+  gap: clamp(6px, 1.2vw, 8px);
+  background: #AF8EBA;
+  color: #fff;
+  border: none;
+  border-radius: clamp(20px, 4vw, 25px);
+  padding: clamp(8px, 1.5vw, 12px) clamp(12px, 2.5vw, 20px);
+  font-size: clamp(12px, 2.2vw, 14px);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Outfit', sans-serif;
+  box-shadow: 0 clamp(2px, 0.4vw, 4px) clamp(8px, 1.5vw, 12px) rgba(175, 142, 186, 0.3);
+  min-height: clamp(36px, 6vw, 44px);
+  min-width: clamp(120px, 20vw, 160px);
+}
+
+.message-btn:hover {
+  background: #9a7da6;
+  transform: translateY(-clamp(1px, 0.2vw, 2px));
+  box-shadow: 0 clamp(4px, 0.8vw, 8px) clamp(16px, 3vw, 24px) rgba(175, 142, 186, 0.4);
+}
+
+.action-icon-btn {
+  width: clamp(36px, 6vw, 48px);
+  height: clamp(36px, 6vw, 48px);
+  border-radius: 50%;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease;
+  min-width: clamp(44px, 7vw, 56px);
+  min-height: clamp(44px, 7vw, 56px);
+}
+
+.action-icon-btn:hover {
+  background: #AF8EBA22;
+}
+
+.action-icon-btn:hover img {
+  filter: brightness(0) saturate(100%) invert(36%) sepia(19%) saturate(1162%) hue-rotate(230deg) brightness(97%) contrast(92%);
+}
+
+/* Info buttons */
+.info-btn {
+  display: flex;
+  align-items: center;
+  gap: clamp(6px, 1.2vw, 8px);
+  background: none;
+  border: none;
+  color: #424242;
+  font-size: clamp(14px, 2.5vw, 16px);
+  margin: clamp(6px, 1.2vw, 8px) 0;
+  cursor: pointer;
+  padding: clamp(8px, 1.5vw, 12px);
+  transition: color 0.2s ease;
+  min-height: clamp(32px, 5vw, 40px);
+  border-radius: clamp(4px, 0.8vw, 6px);
+}
+
+.info-btn:hover {
+  color: #AF8EBA;
+  background: rgba(175, 142, 186, 0.05);
+}
+
+.info-btn:hover span {
+  color: #AF8EBA;
+}
+
+.location-icon {
+  min-width: clamp(16px, 3vw, 20px);
+  min-height: clamp(16px, 3vw, 20px);
+}
+
+.star-rating {
+  color: #FFC107;
+  font-size: clamp(16px, 3vw, 18px);
+}
+
+.rating-text {
+  margin-left: clamp(6px, 1.2vw, 8px);
+}
+
+.price-display {
+  font-weight: 500;
+  font-size: clamp(18px, 3.5vw, 22px);
+  margin: clamp(6px, 1.2vw, 8px) 0;
+  color: #000;
+}
+
+.tags-container {
+  display: flex;
+  gap: clamp(12px, 2vw, 16px);
+  margin-top: clamp(16px, 2.5vw, 20px);
+  flex-wrap: wrap;
+}
+
+/* Separator lines */
+.separator {
+  width: 100%;
+  padding: 0 clamp(15px, 3vw, 5vw);
+  margin: clamp(30px, 5vw, 40px) 0;
+  display: flex;
+  justify-content: center;
+}
+
+.separator-line {
+  border-top: clamp(0.5px, 0.1vw, 1px) solid #000;
+  width: 100%;
+}
+
+/* Why use Mehfil section */
+.why-mehfil-section {
+  width: 100%;
+  padding: 0 clamp(15px, 3vw, 5vw);
+  margin-top: clamp(30px, 5vw, 40px);
+  display: flex;
+  justify-content: center;
+}
+
+.why-mehfil-container {
+  width: 100%;
+  background: #A7B998;
+  border-radius: clamp(8px, 1.5vw, 10px);
+  position: relative;
+  padding: clamp(20px, 4vw, 32px) clamp(25px, 5vw, 40px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 2.5vw, 20px);
+}
+
+.why-mehfil-title {
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(18px, 3.5vw, 24px);
+  line-height: 1.25;
+  color: #FFEBEC;
+  margin-bottom: clamp(12px, 2.5vw, 18px);
+  text-align: left;
+}
+
+.why-mehfil-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 1.5vw, 12px);
+  width: 100%;
+}
+
+.why-mehfil-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  color: #FFEBEC;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 2.5vw, 18px);
+  line-height: 1.4;
+}
+
+.checkmark {
+  color: #FFEBEC;
+  font-size: clamp(18px, 3.5vw, 22px);
+  margin-right: clamp(12px, 2.5vw, 16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(20px, 3.5vw, 24px);
+  height: clamp(20px, 3.5vw, 24px);
+  flex-shrink: 0;
+}
+
+.item-text {
+  flex: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(12px, 2vw, 16px);
+  }
+  
+  .actions-row {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-section {
+    padding: clamp(15px, 3vw, 25px) clamp(12px, 2.5vw, 4vw) 0 clamp(12px, 2.5vw, 4vw);
+  }
+  
+  .content-section {
+    padding: 0 clamp(12px, 2.5vw, 4vw);
+  }
+  
+  .separator {
+    padding: 0 clamp(12px, 2.5vw, 4vw);
+  }
+  
+  .why-mehfil-section {
+    padding: 0 clamp(12px, 2.5vw, 4vw);
+  }
+}
+
+@media (max-width: 768px) {
+  .details-page-container {
+    padding-top: clamp(100px, 15vw, 140px);
+  }
+  
+  .main-section {
+    padding: clamp(10px, 2.5vw, 20px) clamp(10px, 2.5vw, 3vw) 0 clamp(10px, 2.5vw, 3vw);
+  }
+  
+  .content-section {
+    padding: 0 clamp(10px, 2.5vw, 3vw);
+  }
+  
+  .title-row {
+    flex-direction: column;
+    gap: clamp(12px, 2vw, 16px);
+  }
+  
+  .actions-row {
+    gap: clamp(8px, 1.5vw, 12px);
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  .message-btn {
+    padding: clamp(8px, 1.5vw, 10px) clamp(12px, 2.5vw, 16px);
+    min-height: clamp(40px, 7vw, 48px);
+    min-width: clamp(140px, 25vw, 180px);
+  }
+  
+  .action-icon-btn {
+    width: clamp(40px, 6vw, 48px);
+    height: clamp(40px, 6vw, 48px);
+    min-width: clamp(48px, 7vw, 56px);
+    min-height: clamp(48px, 7vw, 56px);
+  }
+  
+  .info-btn {
+    padding: clamp(10px, 2vw, 12px);
+    min-height: clamp(36px, 6vw, 44px);
+  }
+  
+  .separator {
+    padding: 0 clamp(10px, 2.5vw, 3vw);
+    margin: clamp(20px, 4vw, 30px) 0;
+  }
+  
+  .why-mehfil-section {
+    padding: 0 clamp(10px, 2.5vw, 3vw);
+  }
+  
+  .why-mehfil-container {
+    padding: clamp(16px, 3vw, 24px) clamp(20px, 4vw, 30px);
+  }
+}
+
+@media (max-width: 480px) {
+  .details-page-container {
+    padding-top: clamp(90px, 14vw, 130px);
+  }
+  
+  .main-section {
+    padding: clamp(8px, 2vw, 15px) clamp(8px, 2vw, 2.5vw) 0 clamp(8px, 2vw, 2.5vw);
+  }
+  
+  .content-section {
+    padding: 0 clamp(8px, 2vw, 2.5vw);
+  }
+  
+  .title-row {
+    gap: clamp(8px, 1.5vw, 12px);
+  }
+  
+  .actions-row {
+    gap: clamp(6px, 1.2vw, 8px);
+    flex-wrap: wrap;
+  }
+  
+  .message-btn {
+    padding: clamp(8px, 1.5vw, 10px) clamp(10px, 2vw, 14px);
+    font-size: clamp(11px, 2vw, 13px);
+    min-height: clamp(36px, 6vw, 44px);
+    min-width: clamp(120px, 22vw, 160px);
+  }
+  
+  .action-icon-btn {
+    width: clamp(36px, 5.5vw, 44px);
+    height: clamp(36px, 5.5vw, 44px);
+    min-width: clamp(44px, 6.5vw, 52px);
+    min-height: clamp(44px, 6.5vw, 52px);
+  }
+  
+  .info-btn {
+    padding: clamp(8px, 1.5vw, 10px);
+    min-height: clamp(32px, 5.5vw, 40px);
+    font-size: clamp(13px, 2.2vw, 15px);
+  }
+  
+  .vendor-title {
+    font-size: clamp(18px, 3.5vw, 24px);
+  }
+  
+  .price-display {
+    font-size: clamp(16px, 3vw, 20px);
+  }
+  
+  .separator {
+    padding: 0 clamp(8px, 2vw, 2.5vw);
+    margin: clamp(15px, 3vw, 25px) 0;
+  }
+  
+  .why-mehfil-section {
+    padding: 0 clamp(8px, 2vw, 2.5vw);
+  }
+  
+  .why-mehfil-container {
+    padding: clamp(12px, 2.5vw, 20px) clamp(15px, 3vw, 25px);
+  }
+  
+  .why-mehfil-title {
+    font-size: clamp(16px, 3vw, 20px);
+  }
+  
+  .why-mehfil-item {
+    font-size: clamp(13px, 2.2vw, 16px);
+  }
+}
+
+@media (max-width: 360px) {
+  .details-page-container {
+    padding-top: clamp(80px, 12vw, 120px);
+  }
+  
+  .main-section {
+    padding: clamp(6px, 1.5vw, 12px) clamp(6px, 1.5vw, 2vw) 0 clamp(6px, 1.5vw, 2vw);
+  }
+  
+  .content-section {
+    padding: 0 clamp(6px, 1.5vw, 2vw);
+  }
+  
+  .actions-row {
+    gap: clamp(4px, 1vw, 6px);
+  }
+  
+  .message-btn {
+    padding: clamp(6px, 1.2vw, 8px) clamp(8px, 1.5vw, 12px);
+    font-size: clamp(10px, 1.8vw, 12px);
+    min-height: clamp(32px, 5vw, 40px);
+    min-width: clamp(100px, 20vw, 140px);
+  }
+  
+  .action-icon-btn {
+    width: clamp(32px, 5vw, 40px);
+    height: clamp(32px, 5vw, 40px);
+    min-width: clamp(40px, 6vw, 48px);
+    min-height: clamp(40px, 6vw, 48px);
+  }
+  
+  .info-btn {
+    padding: clamp(6px, 1.2vw, 8px);
+    min-height: clamp(28px, 4.5vw, 36px);
+    font-size: clamp(12px, 2vw, 14px);
+  }
+  
+  .vendor-title {
+    font-size: clamp(16px, 3vw, 20px);
+  }
+  
+  .price-display {
+    font-size: clamp(14px, 2.5vw, 18px);
+  }
+  
+  .separator {
+    padding: 0 clamp(6px, 1.5vw, 2vw);
+    margin: clamp(12px, 2.5vw, 20px) 0;
+  }
+  
+  .why-mehfil-section {
+    padding: 0 clamp(6px, 1.5vw, 2vw);
+  }
+  
+  .why-mehfil-container {
+    padding: clamp(10px, 2vw, 16px) clamp(12px, 2.5vw, 20px);
+  }
+  
+  .why-mehfil-title {
+    font-size: clamp(14px, 2.5vw, 18px);
+  }
+  
+  .why-mehfil-item {
+    font-size: clamp(12px, 2vw, 14px);
+  }
+} 

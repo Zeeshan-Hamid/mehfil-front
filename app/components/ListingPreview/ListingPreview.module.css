@@ -1,0 +1,642 @@
+/* Add ListingPreview-specific styles here */ 
+
+.preview-scroll-box {
+  background: #fff;
+  border: 1px solid #9CAD89;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  height: 100%;
+  min-height: 500px;
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.listing-create-edit-preview {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  min-height: unset;
+  height: auto;
+  padding: 0;
+}
+
+/* Preview Content */
+.preview-content {
+  padding: clamp(24px, 4vw, 47px);
+}
+
+/* Image Gallery */
+.preview-images {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) minmax(120px, 0.5fr) minmax(120px, 0.5fr);
+  grid-template-rows: auto;
+  gap: clamp(8px, 1vw, 10px);
+  margin-bottom: clamp(24px, 3vw, 32px);
+}
+
+.main-image, .side-image, .side-image-large {
+  background: #f0f0f0;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: clamp(12px, 1.5vw, 14px);
+  min-height: 120px;
+  aspect-ratio: 16/9;
+}
+
+.side-images {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 1vw, 10px);
+}
+
+.side-image {
+  height: auto;
+  min-height: 80px;
+  aspect-ratio: 4/3;
+}
+
+/* Business Info */
+.preview-business-info {
+  margin-bottom: clamp(24px, 3vw, 32px);
+}
+
+.business-name {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: clamp(14px, 2vw, 16px);
+  color: #000;
+  margin: 0 0 clamp(6px, 1vw, 8px) 0;
+}
+
+.business-location {
+  display: flex;
+  align-items: center;
+  gap: clamp(6px, 1vw, 8px);
+  margin-bottom: clamp(6px, 1vw, 8px);
+}
+
+.business-location span {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: clamp(10px, 1.2vw, 11px);
+  color: #424242;
+}
+
+.business-rating {
+  display: flex;
+  align-items: center;
+  gap: clamp(6px, 1vw, 8px);
+  margin-bottom: clamp(12px, 2vw, 16px);
+}
+
+.business-rating span {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: clamp(10px, 1.2vw, 11px);
+  color: #424242;
+}
+
+.business-actions {
+  display: flex;
+  gap: clamp(6px, 1vw, 8px);
+  justify-content: flex-end;
+}
+
+.bookmark-btn, .share-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Verified Badges */
+.preview-badges {
+  display: flex;
+  gap: clamp(12px, 2vw, 16px);
+  margin-bottom: clamp(24px, 3vw, 32px);
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1.2vw, 11px);
+  background: #AF8EBA;
+  border-radius: 11px;
+  padding: clamp(6px, 1vw, 8px) clamp(8px, 1.2vw, 11px);
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: clamp(11px, 1.5vw, 13px);
+}
+
+/* Navigation Tabs */
+.preview-tabs {
+  display: flex;
+  gap: clamp(80px, 12vw, 168px);
+  margin-bottom: clamp(24px, 3vw, 32px);
+  border-bottom: 1px solid #000;
+  padding-bottom: clamp(12px, 2vw, 16px);
+  flex-wrap: wrap;
+}
+
+.tab {
+  background: none;
+  border: none;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: clamp(11px, 1.5vw, 13px);
+  color: #000;
+  cursor: pointer;
+  padding: 0;
+}
+
+.tab.active {
+  border-bottom: 1px solid #AF8EBA;
+  font-weight: 600;
+}
+
+/* Details Section */
+.preview-details {
+  margin-bottom: clamp(24px, 3vw, 32px);
+}
+
+.details-content h3, .details-content h4 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 2vw, 16px);
+  color: #000;
+  margin: 0 0 clamp(12px, 2vw, 16px) 0;
+}
+
+.description {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: clamp(11px, 1.5vw, 13px);
+  line-height: 1.3;
+  color: #000;
+  margin-bottom: clamp(18px, 2.5vw, 24px);
+  max-width: 100%;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: clamp(12px, 2vw, 16px);
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1.2vw, 11px);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: clamp(11px, 1.5vw, 13px);
+  color: #000;
+}
+
+/* Pricing Section */
+.preview-pricing {
+  margin-bottom: clamp(24px, 3vw, 32px);
+}
+
+.preview-pricing h3 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 2vw, 16px);
+  color: #000;
+  margin: 0 0 clamp(18px, 2.5vw, 24px) 0;
+}
+
+.pricing-packages {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 2vw, 16px);
+  margin-bottom: clamp(24px, 3vw, 32px);
+}
+
+.package {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(12px, 2vw, 16px) clamp(14px, 2.2vw, 18px);
+  border: 1px solid #AF8EBA;
+  border-radius: 11px;
+  background: #fff;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.package.active {
+  background: #AF8EBA;
+  color: #fff;
+}
+
+.package-info {
+  display: flex;
+  gap: clamp(18px, 2.5vw, 27px);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.package-name {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: clamp(11px, 1.5vw, 13px);
+}
+
+.package-price {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: clamp(11px, 1.5vw, 13px);
+}
+
+.package-details {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: clamp(9px, 1.2vw, 11px);
+  max-width: 200px;
+}
+
+/* Calendar */
+.pricing-calendar {
+  background: #fff;
+  border-radius: 5px;
+  padding: clamp(12px, 2vw, 16px);
+  box-shadow: 2px 16px 19px rgba(0, 0, 0, 0.09);
+  width: clamp(180px, 25vw, 204px);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: clamp(12px, 2vw, 16px);
+}
+
+.calendar-header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: clamp(14px, 2vw, 16px);
+  color: #000;
+}
+
+.calendar-header span {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: clamp(12px, 1.8vw, 14px);
+  color: #000;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: clamp(6px, 1vw, 8px);
+}
+
+.calendar-day {
+  width: clamp(20px, 3vw, 24px);
+  height: clamp(20px, 3vw, 24px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(10px, 1.5vw, 12px);
+  color: #666;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.calendar-day.active {
+  background: #AF8EBA;
+  color: #fff;
+}
+
+/* Action Buttons */
+.preview-actions {
+  display: flex;
+  gap: clamp(12px, 2vw, 16px);
+  margin-bottom: clamp(24px, 3vw, 32px);
+  flex-wrap: wrap;
+}
+
+.book-now-btn {
+  background: #AF8EBA;
+  color: #fff;
+  border: none;
+  border-radius: 11px;
+  padding: clamp(10px, 1.8vw, 12px) clamp(20px, 2.5vw, 24px);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: clamp(12px, 1.8vw, 14px);
+  cursor: pointer;
+  flex: 1;
+  min-width: 120px;
+}
+
+.phone-btn, .message-btn {
+  background: none;
+  border: 1px solid #AF8EBA;
+  border-radius: 11px;
+  padding: clamp(10px, 1.8vw, 12px);
+  cursor: pointer;
+  width: clamp(40px, 6vw, 48px);
+  height: clamp(40px, 6vw, 48px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-btn {
+  background: none;
+  border: 1px solid #AF8EBA;
+  border-radius: 11px;
+  padding: clamp(10px, 1.8vw, 12px) clamp(20px, 2.5vw, 24px);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: clamp(12px, 1.8vw, 14px);
+  color: #AF8EBA;
+  cursor: pointer;
+}
+
+/* Guest Counter */
+.preview-guest-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8F8F8;
+  border-radius: 11px;
+  padding: clamp(12px, 2vw, 16px) clamp(14px, 2.2vw, 18px);
+  margin-bottom: clamp(24px, 3vw, 32px);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.counter-controls {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 16px);
+}
+
+.minus-btn, .plus-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: clamp(16px, 2.2vw, 18px);
+  color: #000;
+  width: clamp(20px, 3vw, 24px);
+  height: clamp(20px, 3vw, 24px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guest-count {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: clamp(14px, 2vw, 16px);
+  color: #000;
+  min-width: clamp(28px, 4vw, 32px);
+  text-align: center;
+}
+
+.price-per-head {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: clamp(12px, 1.8vw, 14px);
+  color: #AF8EBA;
+}
+
+/* Map */
+.preview-map {
+  margin-bottom: clamp(24px, 3vw, 32px);
+}
+
+.preview-map h3 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 2vw, 16px);
+  color: #000;
+  margin: 0 0 clamp(12px, 2vw, 16px) 0;
+}
+
+.map-container {
+  background: #F8F8F8;
+  border-radius: 11px;
+  padding: clamp(12px, 2vw, 16px);
+  position: relative;
+  height: clamp(100px, 15vw, 120px);
+}
+
+.map-marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(20px, 3vw, 24px);
+  height: clamp(20px, 3vw, 24px);
+  background: #AF8EBA;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: clamp(10px, 1.5vw, 12px);
+}
+
+.map-address {
+  position: absolute;
+  bottom: clamp(12px, 2vw, 16px);
+  left: clamp(12px, 2vw, 16px);
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(10px, 1.5vw, 12px);
+  color: #666;
+}
+
+/* Reviews */
+.preview-reviews h3 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 2vw, 16px);
+  color: #000;
+  margin: 0 0 clamp(12px, 2vw, 16px) 0;
+}
+
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: clamp(12px, 2vw, 16px);
+}
+
+.view-all {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(10px, 1.5vw, 12px);
+  color: #AF8EBA;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 2vw, 16px);
+}
+
+.review-item {
+  display: flex;
+  gap: clamp(10px, 1.5vw, 12px);
+}
+
+.review-avatar {
+  width: clamp(28px, 4vw, 32px);
+  height: clamp(28px, 4vw, 32px);
+  background: #FFC7D4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(10px, 1.5vw, 12px);
+  color: #000;
+  flex-shrink: 0;
+}
+
+.review-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.reviewer-name {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: clamp(10px, 1.5vw, 12px);
+  color: #000;
+}
+
+.review-stars {
+  font-size: clamp(8px, 1.2vw, 9px);
+  color: #FBBC04;
+}
+
+.review-date {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: clamp(8px, 1.2vw, 9px);
+  color: rgba(0, 0, 0, 0.54);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.review-text {
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 400;
+  font-size: clamp(9px, 1.3vw, 11px);
+  line-height: 1.45;
+  color: #2A363D;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .listing-create-edit-preview {
+    margin-left: 0;
+    margin-top: 24px;
+  }
+  
+  .preview-images {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  
+  .main-image {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .preview-content {
+    padding: 20px;
+  }
+  
+  .preview-images {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .preview-tabs {
+    gap: 40px;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pricing-calendar {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .preview-actions {
+    flex-direction: column;
+  }
+  
+  .book-now-btn {
+    order: 1;
+  }
+  
+  .phone-btn, .message-btn {
+    order: 2;
+  }
+  
+  .quote-btn {
+    order: 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .preview-content {
+    padding: 16px;
+  }
+  
+  .preview-images {
+    gap: 8px;
+  }
+  
+  .preview-tabs {
+    gap: 20px;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .preview-badges {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .preview-guest-counter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .counter-controls {
+    justify-content: center;
+  }
+} 

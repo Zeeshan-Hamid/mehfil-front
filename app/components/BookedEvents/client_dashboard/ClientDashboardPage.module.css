@@ -1,0 +1,106 @@
+.dashboardContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.dashboardHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.dashboardTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.dashboardSubtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
+}
+
+.todoSection {
+  margin-bottom: 3rem;
+}
+
+.bottomSection {
+  margin-bottom: 2rem;
+}
+
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  width: 100%;
+}
+
+.vendorsSection,
+.calendarSection {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  min-height: 400px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .mainContent {
+    padding: 1.5rem;
+  }
+  
+  .dashboardTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    padding: 1rem;
+  }
+  
+  .dashboardTitle {
+    font-size: 1.75rem;
+  }
+  
+  .dashboardSubtitle {
+    font-size: 1rem;
+  }
+  
+  .bottomGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .todoSection {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContent {
+    padding: 0.75rem;
+  }
+  
+  .dashboardTitle {
+    font-size: 1.5rem;
+  }
+  
+  .dashboardHeader {
+    margin-bottom: 2rem;
+  }
+} 

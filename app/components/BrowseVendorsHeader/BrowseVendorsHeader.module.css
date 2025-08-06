@@ -1,0 +1,101 @@
+.browseVendorsHeader {
+  width: 100%;
+}
+
+.bgPurpleHeader {
+  background: #E0CFED;
+}
+
+.browseSearchRow {
+  display: flex;
+  align-items: center;
+  margin-top: 32px;
+  gap: 18px;
+}
+
+.browseSearchBar {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1.5px solid #BC65FB;
+  border-radius: 90px;
+  height: 47px;
+  width: 570px;
+  padding: 0 0 0 16px;
+  box-sizing: border-box;
+}
+
+.searchIconWrap {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.browseSearchInput {
+  border: none;
+  background: transparent;
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  color: rgba(76, 79, 71, 0.54);
+  outline: none;
+  width: 120px;
+}
+
+.browseSearchInput::placeholder {
+  color: rgba(76, 79, 71, 0.54);
+}
+
+.searchDivider {
+  width: 1px;
+  height: 24px;
+  background: #E0CFED;
+  margin: 0 12px;
+  display: inline-block;
+}
+
+.searchIn {
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  color: rgba(76, 79, 71, 0.54);
+  margin-right: 12px;
+}
+
+.browseLocationInput {
+  border: none;
+  background: transparent;
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  color: rgba(76, 79, 71, 0.54);
+  outline: none;
+  width: 120px;
+}
+
+.browseLocationInput::placeholder {
+  color: rgba(76, 79, 71, 0.54);
+}
+
+.browseSearchBtn {
+  margin-left: 10px;
+  height: 40px;
+  padding: 0 32px;
+  background: #AF8EBA;
+  color: #fff;
+  border: none;
+  border-radius: 22px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: none;
+}
+
+.browseSearchBtn:hover {
+  background: #9B7BA7;
+} 

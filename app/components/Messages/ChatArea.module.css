@@ -1,0 +1,1420 @@
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.chatArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  height: 100%;
+  min-height: 0;
+}
+
+.emptyState {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafafa;
+}
+
+.emptyContent {
+  text-align: center;
+  color: #6b7280;
+}
+
+.emptyIcon {
+  margin-bottom: clamp(12px, 2vw, 16px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emptyTitle {
+  font-size: clamp(16px, 3vw, 20px);
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 clamp(6px, 1vw, 8px) 0;
+}
+
+.emptySubtitle {
+  font-size: clamp(12px, 2vw, 14px);
+  color: #6b7280;
+  margin: 0;
+}
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(10px, 2vw, 14px) clamp(16px, 3vw, 20px);
+  border-bottom: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+.contactInfo {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1.5vw, 10px);
+}
+
+.avatarContainer {
+  position: relative;
+}
+
+.avatar {
+  width: clamp(32px, 5vw, 36px);
+  height: clamp(32px, 5vw, 36px);
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background: #f3f4f6;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.onlineIndicator {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  width: clamp(6px, 1.5vw, 8px);
+  height: clamp(6px, 1.5vw, 8px);
+  background: #10b981;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactName {
+  font-size: clamp(12px, 2.2vw, 14px);
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 clamp(1px, 0.2vw, 1px) 0;
+}
+
+.contactType {
+  font-size: clamp(9px, 1.8vw, 11px);
+  color: #6b7280;
+  margin: 0;
+}
+
+.deleteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(28px, 4vw, 32px);
+  height: clamp(28px, 4vw, 32px);
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  border-radius: clamp(4px, 1vw, 6px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.deleteButton:hover {
+  background: #f3f4f6;
+  color: #dc2626;
+}
+
+.headerActions {
+  display: flex;
+  gap: clamp(4px, 1vw, 6px);
+}
+
+.actionButton {
+  width: clamp(28px, 4vw, 32px);
+  height: clamp(28px, 4vw, 32px);
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  border-radius: clamp(4px, 1vw, 6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.actionButton:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.messagesArea {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background: #fafafa;
+  padding: clamp(8px, 1.5vw, 12px) clamp(12px, 2.5vw, 16px);
+  gap: clamp(4px, 1vw, 8px);
+  width: 100%;
+}
+
+.messagesContainer {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fafafa;
+  padding: clamp(8px, 1.5vw, 12px) 0;
+  gap: clamp(4px, 1vw, 8px);
+  width: 100%;
+}
+
+.dateSeparator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: clamp(12px, 2vw, 16px) 0;
+  position: relative;
+  width: 100%;
+  padding: 0 clamp(12px, 2.5vw, 16px);
+}
+
+.dateSeparator::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: clamp(1px, 0.2vw, 2px);
+  background: #e5e7eb;
+  z-index: 1;
+}
+
+.dateText {
+  background: #fafafa;
+  padding: clamp(4px, 1vw, 6px) clamp(12px, 2.5vw, 16px);
+  font-size: clamp(10px, 2vw, 12px);
+  color: #6b7280;
+  font-weight: 500;
+  z-index: 2;
+  position: relative;
+  border-radius: clamp(12px, 2.5vw, 16px);
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.messageItem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: clamp(8px, 1.5vw, 12px);
+  max-width: 100%;
+  width: 100%;
+}
+
+.sentMessage {
+  align-self: flex-end;
+  align-items: flex-end;
+  margin-left: auto;
+  max-width: 80%;
+  min-width: clamp(180px, 25vw, 220px);
+  padding-right: clamp(8px, 1.5vw, 12px);
+}
+
+.receivedMessage {
+  align-self: flex-start;
+  align-items: flex-start;
+  margin-right: auto;
+  max-width: 80%;
+  min-width: clamp(180px, 25vw, 220px);
+}
+
+.messageBubble {
+  padding: clamp(10px, 2vw, 12px) clamp(14px, 2.5vw, 16px);
+  border-radius: clamp(14px, 3vw, 18px);
+  margin-bottom: clamp(2px, 0.5vw, 3px);
+  word-wrap: break-word;
+  max-width: 100%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.sentMessage .messageBubble {
+  background: linear-gradient(135deg, #AF8EBA, #9A7BA5);
+  color: #fff;
+  border-bottom-right-radius: clamp(4px, 1vw, 6px);
+  margin-left: auto;
+}
+
+.receivedMessage .messageBubble {
+  background: #f8f6ff;
+  color: #374151;
+  border: 1px solid #e8e0f0;
+  border-bottom-left-radius: clamp(4px, 1vw, 6px);
+  margin-right: auto;
+}
+
+.messageText {
+  margin: 0;
+  font-size: clamp(11px, 2.2vw, 13px);
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.messageImage {
+  max-width: clamp(200px, 40vw, 250px);
+  max-height: clamp(150px, 30vw, 200px);
+  width: auto;
+  height: auto;
+  border-radius: clamp(8px, 2vw, 12px);
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.messageImage:hover {
+  transform: scale(1.02);
+}
+
+/* Ensure images don't break the chat bubble layout */
+.sentMessage .messageBubble,
+.receivedMessage .messageBubble {
+  max-width: clamp(300px, 60vw, 400px);
+  overflow: hidden;
+}
+
+/* For larger screens, allow slightly bigger images */
+@media (min-width: 768px) {
+  .messageImage {
+    max-width: clamp(250px, 45vw, 300px);
+    max-height: clamp(200px, 35vw, 250px);
+  }
+  
+  .sentMessage .messageBubble,
+  .receivedMessage .messageBubble {
+    max-width: clamp(300px, 55vw, 350px);
+  }
+}
+
+/* Multiple Images Container - WhatsApp Style */
+.multipleImagesContainer {
+  display: grid;
+  gap: 2px;
+  max-width: 100%;
+  border-radius: clamp(6px, 1.5vw, 8px);
+  overflow: hidden;
+}
+
+.multipleImagesContainer .messageImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border-radius: 0;
+}
+
+.multipleImagesContainer .messageImage:hover {
+  transform: scale(1.02);
+}
+
+/* WhatsApp-style grid layouts */
+/* Single image */
+.multipleImagesContainer:has(.messageImage:nth-child(1):nth-last-child(1)) {
+  grid-template-columns: 1fr;
+  max-width: clamp(250px, 50vw, 300px);
+}
+
+/* Two images */
+.multipleImagesContainer:has(.messageImage:nth-child(2):nth-last-child(1)) {
+  grid-template-columns: 1fr 1fr;
+  max-width: clamp(300px, 60vw, 400px);
+}
+
+/* Three images */
+.multipleImagesContainer:has(.messageImage:nth-child(3):nth-last-child(1)) {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.multipleImagesContainer:has(.messageImage:nth-child(3):nth-last-child(1)) .messageImage:first-child {
+  grid-row: 1 / 3;
+}
+
+/* Four images */
+.multipleImagesContainer:has(.messageImage:nth-child(4):nth-last-child(1)) {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  max-width: clamp(300px, 60vw, 400px);
+}
+
+/* Sending indicator for multiple images */
+.sendingMultipleImages {
+  opacity: 0.7;
+  position: relative;
+}
+
+.sendingMultipleImages::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(32px, 6vw, 40px);
+  height: clamp(32px, 6vw, 40px);
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.sendingMultipleImages::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(16px, 3vw, 20px);
+  height: clamp(16px, 3vw, 20px);
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 11;
+}
+
+/* For larger screens, allow slightly bigger images */
+@media (min-width: 768px) {
+  .multipleImagesContainer:has(.messageImage:nth-child(1):nth-last-child(1)) {
+    max-width: clamp(300px, 55vw, 350px);
+  }
+  
+  .multipleImagesContainer:has(.messageImage:nth-child(2):nth-last-child(1)) {
+    max-width: clamp(350px, 65vw, 450px);
+  }
+  
+  .multipleImagesContainer:has(.messageImage:nth-child(3):nth-last-child(1)),
+  .multipleImagesContainer:has(.messageImage:nth-child(4):nth-last-child(1)) {
+    max-width: clamp(350px, 65vw, 450px);
+  }
+}
+
+/* For smaller screens, make images smaller */
+@media (max-width: 480px) {
+  .multipleImagesContainer:has(.messageImage:nth-child(1):nth-last-child(1)) {
+    max-width: clamp(180px, 45vw, 250px);
+  }
+  
+  .multipleImagesContainer:has(.messageImage:nth-child(2):nth-last-child(1)) {
+    max-width: clamp(220px, 55vw, 300px);
+  }
+  
+  .multipleImagesContainer:has(.messageImage:nth-child(3):nth-last-child(1)),
+  .multipleImagesContainer:has(.messageImage:nth-child(4):nth-last-child(1)) {
+    max-width: clamp(220px, 55vw, 300px);
+  }
+}
+
+/* For very small screens */
+@media (max-width: 360px) {
+  .multipleImagesContainer:has(.messageImage:nth-child(1):nth-last-child(1)) {
+    max-width: clamp(150px, 40vw, 200px);
+  }
+  
+  .multipleImagesContainer:has(.messageImage:nth-child(2):nth-last-child(1)) {
+    max-width: clamp(180px, 50vw, 250px);
+  }
+  
+  .multipleImagesContainer:has(.messageImage:nth-child(3):nth-last-child(1)),
+  .multipleImagesContainer:has(.messageImage:nth-child(4):nth-last-child(1)) {
+    max-width: clamp(180px, 50vw, 250px);
+  }
+}
+
+.messageMeta {
+  display: flex;
+  align-items: center;
+  gap: clamp(2px, 0.5vw, 3px);
+  font-size: clamp(8px, 1.5vw, 10px);
+  color: #6b7280;
+  margin-top: clamp(2px, 0.5vw, 4px);
+}
+
+.sentMessage .messageMeta {
+  color: rgba(255, 255, 255, 0.8);
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.receivedMessage .messageMeta {
+  color: #9ca3af;
+  justify-content: flex-start;
+  margin-right: auto;
+}
+
+.readIndicator {
+  color: #9ca3af;
+  margin-right: clamp(2px, 0.5vw, 4px);
+}
+
+.sentMessage .readIndicator {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.messageTime {
+  font-size: clamp(9px, 1.8vw, 11px);
+  color: #9ca3af;
+}
+
+.sentMessage .messageTime {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Sending indicator styles */
+.sendingMessage {
+  opacity: 0.7;
+}
+
+.sendingIndicator {
+  display: flex;
+  align-items: center;
+  gap: clamp(1px, 0.3vw, 2px);
+  margin-right: clamp(2px, 0.5vw, 4px);
+}
+
+.sendingDot {
+  width: clamp(3px, 0.8vw, 4px);
+  height: clamp(3px, 0.8vw, 4px);
+  background: #9ca3af;
+  border-radius: 50%;
+  animation: sending 1.4s infinite ease-in-out;
+}
+
+.sendingDot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.sendingDot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes sending {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.typingBubble {
+  padding: clamp(10px, 2vw, 12px) clamp(14px, 2.5vw, 16px);
+  background: #f8f6ff;
+  border: 1px solid #e8e0f0;
+  border-radius: clamp(14px, 3vw, 18px);
+  border-bottom-left-radius: clamp(4px, 1vw, 6px);
+  margin-bottom: clamp(2px, 0.5vw, 3px);
+}
+
+.typingDots {
+  display: flex;
+  gap: clamp(2px, 0.5vw, 3px);
+  align-items: center;
+}
+
+.dot {
+  width: clamp(4px, 1vw, 5px);
+  height: clamp(4px, 1vw, 5px);
+  background: #9ca3af;
+  border-radius: 50%;
+  animation: typing 1.4s infinite ease-in-out;
+}
+
+.dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes typing {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.messageInput {
+  padding: clamp(10px, 2vw, 14px) clamp(16px, 3vw, 20px);
+  border-top: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+.inputForm {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1.5vw, 10px);
+  max-width: clamp(600px, 80vw, 900px);
+  margin: 0 auto;
+}
+
+.attachButton {
+  width: clamp(32px, 5vw, 36px);
+  height: clamp(32px, 5vw, 36px);
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.attachButton:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.attachButtonContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.messageField {
+  flex: 1;
+  padding: clamp(8px, 1.5vw, 10px) clamp(14px, 2.5vw, 16px);
+  border: 1px solid #e5e7eb;
+  border-radius: clamp(16px, 3vw, 20px);
+  font-size: clamp(11px, 2.2vw, 13px);
+  outline: none;
+  transition: border-color 0.2s;
+  background: #f9fafb;
+}
+
+.messageField:focus {
+  border-color: #AF8EBA;
+  background: #fff;
+}
+
+.messageField::placeholder {
+  color: #9ca3af;
+}
+
+.sendButton {
+  width: clamp(32px, 5vw, 36px);
+  height: clamp(32px, 5vw, 36px);
+  border: none;
+  background: #AF8EBA;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.sendButton:hover:not(:disabled) {
+  background: #9a7ba5;
+}
+
+.sendButton:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .chatHeader {
+    padding: clamp(8px, 1.5vw, 12px) clamp(12px, 2.5vw, 16px);
+  }
+  
+  .contactName {
+    font-size: clamp(11px, 2vw, 13px);
+  }
+  
+  .contactType {
+    font-size: clamp(8px, 1.5vw, 10px);
+  }
+  
+  .actionButton {
+    width: clamp(24px, 4vw, 28px);
+    height: clamp(24px, 4vw, 28px);
+  }
+  
+  .messagesArea {
+    padding: clamp(8px, 1.5vw, 12px) clamp(12px, 2.5vw, 16px);
+  }
+  
+  .messageItem {
+    max-width: 100%;
+  }
+  
+  .messageBubble {
+    padding: clamp(8px, 1.5vw, 10px) clamp(12px, 2.5vw, 14px);
+  }
+  
+  .messageText {
+    font-size: clamp(10px, 2vw, 12px);
+  }
+  
+  .messageInput {
+    padding: clamp(8px, 1.5vw, 12px) clamp(12px, 2.5vw, 16px);
+  }
+  
+  .inputForm {
+    gap: clamp(6px, 1.2vw, 8px);
+  }
+  
+  .attachButton,
+  .sendButton {
+    width: clamp(28px, 4.5vw, 32px);
+    height: clamp(28px, 4.5vw, 32px);
+  }
+  
+  .messageField {
+    padding: clamp(6px, 1.2vw, 8px) clamp(12px, 2.5vw, 14px);
+    font-size: clamp(10px, 2vw, 12px);
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .chatHeader {
+    padding: clamp(6px, 1.2vw, 10px) clamp(10px, 2vw, 14px);
+  }
+  
+  .contactName {
+    font-size: clamp(10px, 1.8vw, 12px);
+  }
+  
+  .contactType {
+    font-size: clamp(7px, 1.3vw, 9px);
+  }
+  
+  .actionButton {
+    width: clamp(22px, 3.5vw, 26px);
+    height: clamp(22px, 3.5vw, 26px);
+  }
+  
+  .messagesArea {
+    padding: clamp(6px, 1.2vw, 10px) clamp(10px, 2vw, 14px);
+  }
+  
+  .messageBubble {
+    padding: clamp(6px, 1.2vw, 8px) clamp(10px, 2vw, 12px);
+  }
+  
+  .messageText {
+    font-size: clamp(9px, 1.8vw, 11px);
+  }
+  
+  /* Small mobile date separator improvements */
+  .dateSeparator {
+    margin: clamp(8px, 1.5vw, 12px) 0;
+    padding: 0 clamp(6px, 1.5vw, 10px);
+  }
+  
+  .dateText {
+    padding: clamp(2px, 0.6vw, 4px) clamp(8px, 1.8vw, 12px);
+    font-size: clamp(8px, 1.6vw, 10px);
+  }
+  
+  .messageInput {
+    padding: clamp(6px, 1.2vw, 10px) clamp(10px, 2vw, 14px);
+  }
+  
+  .inputForm {
+    gap: clamp(4px, 1vw, 6px);
+  }
+  
+  .attachButton,
+  .sendButton {
+    width: clamp(26px, 4vw, 30px);
+    height: clamp(26px, 4vw, 30px);
+  }
+  
+  .messageField {
+    padding: clamp(5px, 1vw, 7px) clamp(10px, 2vw, 12px);
+    font-size: clamp(9px, 1.8vw, 11px);
+    min-height: clamp(28px, 4.5vw, 32px);
+  }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+  .chatHeader {
+    padding: clamp(5px, 1vw, 8px) clamp(8px, 1.5vw, 12px);
+  }
+  
+  .contactName {
+    font-size: clamp(9px, 1.6vw, 11px);
+  }
+  
+  .contactType {
+    font-size: clamp(6px, 1.1vw, 8px);
+  }
+  
+  .actionButton {
+    width: clamp(20px, 3vw, 24px);
+    height: clamp(20px, 3vw, 24px);
+  }
+  
+  .messagesArea {
+    padding: clamp(5px, 1vw, 8px) clamp(8px, 1.5vw, 12px);
+  }
+  
+  .messageBubble {
+    padding: clamp(5px, 1vw, 7px) clamp(8px, 1.5vw, 10px);
+  }
+  
+  .messageText {
+    font-size: clamp(8px, 1.6vw, 10px);
+  }
+  
+  .messageInput {
+    padding: clamp(5px, 1vw, 8px) clamp(8px, 1.5vw, 12px);
+  }
+  
+  .inputForm {
+    gap: clamp(3px, 0.8vw, 5px);
+  }
+  
+  .attachButton,
+  .sendButton {
+    width: clamp(24px, 3.5vw, 28px);
+    height: clamp(24px, 3.5vw, 28px);
+  }
+  
+  .messageField {
+    padding: clamp(4px, 0.8vw, 6px) clamp(8px, 1.5vw, 10px);
+    font-size: clamp(8px, 1.6vw, 10px);
+  }
+}
+
+/* Document Message Styles */
+.documentLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  gap: clamp(8px, 1.5vw, 12px);
+  transition: opacity 0.2s ease;
+}
+
+.documentLink:hover {
+  opacity: 0.8;
+}
+
+.documentInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.documentName {
+  font-weight: 600;
+  font-size: clamp(12px, 2.2vw, 14px);
+  line-height: 1.2;
+  word-break: break-all;
+}
+
+.documentMeta {
+  font-size: clamp(10px, 1.8vw, 12px);
+  color: #6b7280;
+}
+
+.sentMessage .documentMeta {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Image Modal Styles */
+.imageModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: clamp(10px, 2vw, 20px);
+}
+
+.imageModalContent {
+  position: relative;
+  max-width: clamp(280px, 90vw, 90vw);
+  max-height: clamp(200px, 80vh, 90vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: clamp(6px, 1.5vw, 8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.closeModalButton {
+  position: absolute;
+  top: clamp(-35px, -8vw, -40px);
+  right: 0;
+  width: clamp(32px, 6vw, 40px);
+  height: clamp(32px, 6vw, 40px);
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: #374151;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.closeModalButton:hover {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+/* Mobile responsive for modal */
+@media (max-width: 768px) {
+  .imageModal {
+    padding: clamp(5px, 1vw, 10px);
+  }
+  
+  .closeModalButton {
+    top: clamp(-45px, -10vw, -50px);
+    right: clamp(5px, 1vw, 10px);
+    width: clamp(28px, 5vw, 36px);
+    height: clamp(28px, 5vw, 36px);
+  }
+}
+
+/* Image Modal Navigation */
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: clamp(36px, 7vw, 48px);
+  height: clamp(36px, 7vw, 48px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s ease;
+  z-index: 1001;
+}
+
+.navButton:hover:not(.disabled) {
+  background: rgba(0, 0, 0, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.navButton.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.prevButton {
+  left: clamp(10px, 2vw, 20px);
+}
+
+.nextButton {
+  right: clamp(10px, 2vw, 20px);
+}
+
+.imageCounter {
+  position: absolute;
+  top: clamp(10px, 2vw, 20px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: clamp(6px, 1.5vw, 8px) clamp(12px, 2.5vw, 16px);
+  border-radius: clamp(16px, 3vw, 20px);
+  font-size: clamp(12px, 2.2vw, 14px);
+  font-weight: 500;
+  z-index: 1001;
+}
+
+/* Image Modal Actions */
+.imageModalActions {
+  position: absolute;
+  top: clamp(10px, 2vw, 20px);
+  right: clamp(10px, 2vw, 20px);
+  display: flex;
+  gap: clamp(6px, 1.2vw, 8px);
+  z-index: 1002;
+}
+
+.imageActionButton {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: clamp(32px, 6vw, 40px);
+  height: clamp(32px, 6vw, 40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.imageActionButton:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
+}
+
+/* Responsive image modal actions */
+@media (max-width: 768px) {
+  .imageModalActions {
+    top: clamp(5px, 1vw, 10px);
+    right: clamp(5px, 1vw, 10px);
+  }
+  
+  .imageActionButton {
+    width: clamp(28px, 5vw, 36px);
+    height: clamp(28px, 5vw, 36px);
+  }
+}
+
+/* Responsive navigation buttons */
+@media (max-width: 768px) {
+  .navButton {
+    width: clamp(28px, 5vw, 40px);
+    height: clamp(28px, 5vw, 40px);
+  }
+  
+  .prevButton {
+    left: clamp(5px, 1vw, 10px);
+  }
+  
+  .nextButton {
+    right: clamp(5px, 1vw, 10px);
+  }
+  
+  .imageCounter {
+    top: clamp(5px, 1vw, 10px);
+    padding: clamp(4px, 1vw, 6px) clamp(8px, 1.5vw, 12px);
+    font-size: clamp(10px, 1.8vw, 12px);
+  }
+} 
+
+/* Mobile keyboard fixes */
+@media (max-width: 768px) {
+  .chatArea {
+    min-height: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: clamp(8px, 2vw, 12px);
+  }
+  
+  .messagesArea {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background: #fafafa;
+    padding: clamp(8px, 1.5vw, 12px) clamp(12px, 2.5vw, 16px);
+    gap: clamp(4px, 1vw, 8px);
+  }
+  
+  .messagesContainer {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    background: #fafafa;
+    padding: clamp(8px, 1.5vw, 12px) 0;
+    gap: clamp(4px, 1vw, 8px);
+    width: 100%;
+  }
+  
+  .messageInput {
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    z-index: 10;
+    border-top: 1px solid #e5e7eb;
+    padding: clamp(8px, 1.5vw, 12px) clamp(12px, 2.5vw, 16px);
+    flex-shrink: 0;
+  }
+  
+  .inputForm {
+    gap: clamp(6px, 1.2vw, 8px);
+  }
+  
+  .attachButton,
+  .sendButton {
+    width: clamp(28px, 4.5vw, 32px);
+    height: clamp(28px, 4.5vw, 32px);
+    flex-shrink: 0;
+  }
+  
+  .messageField {
+    padding: clamp(6px, 1.2vw, 8px) clamp(12px, 2.5vw, 14px);
+    font-size: clamp(10px, 2vw, 12px);
+    min-height: clamp(32px, 5vw, 36px);
+  }
+  
+  /* Mobile message alignment improvements */
+  .sentMessage {
+    max-width: 85%;
+    min-width: clamp(140px, 20vw, 160px);
+    padding-right: clamp(6px, 1.2vw, 10px);
+  }
+  
+  .receivedMessage {
+    max-width: 85%;
+    min-width: clamp(140px, 20vw, 160px);
+  }
+  
+  .sentMessage .messageBubble,
+  .receivedMessage .messageBubble {
+    max-width: clamp(250px, 55vw, 350px);
+  }
+  
+  /* Mobile date separator improvements */
+  .dateSeparator {
+    margin: clamp(10px, 1.8vw, 14px) 0;
+    padding: 0 clamp(8px, 2vw, 12px);
+  }
+  
+  .dateText {
+    padding: clamp(3px, 0.8vw, 5px) clamp(10px, 2vw, 14px);
+    font-size: clamp(9px, 1.8vw, 11px);
+  }
+}
+
+@media (max-width: 480px) {
+  .chatArea {
+    border-radius: clamp(6px, 1.5vw, 10px);
+  }
+  
+  .messageInput {
+    padding: clamp(6px, 1.2vw, 10px) clamp(10px, 2vw, 14px);
+  }
+  
+  .inputForm {
+    gap: clamp(4px, 1vw, 6px);
+  }
+  
+  .attachButton,
+  .sendButton {
+    width: clamp(26px, 4vw, 30px);
+    height: clamp(26px, 4vw, 30px);
+  }
+  
+  .messageField {
+    padding: clamp(5px, 1vw, 7px) clamp(10px, 2vw, 12px);
+    font-size: clamp(9px, 1.8vw, 11px);
+    min-height: clamp(28px, 4.5vw, 32px);
+  }
+  
+  /* Small mobile message alignment */
+  .sentMessage {
+    max-width: 90%;
+    min-width: clamp(110px, 18vw, 130px);
+    padding-right: clamp(4px, 1vw, 8px);
+  }
+  
+  .receivedMessage {
+    max-width: 90%;
+    min-width: clamp(110px, 18vw, 130px);
+  }
+  
+  .sentMessage .messageBubble,
+  .receivedMessage .messageBubble {
+    max-width: clamp(200px, 60vw, 300px);
+  }
+  
+  .messageText {
+    font-size: clamp(9px, 1.8vw, 11px);
+  }
+  
+  /* Small mobile date separator improvements */
+  .dateSeparator {
+    margin: clamp(8px, 1.5vw, 12px) 0;
+    padding: 0 clamp(6px, 1.5vw, 10px);
+  }
+  
+  .dateText {
+    padding: clamp(2px, 0.6vw, 4px) clamp(8px, 1.8vw, 12px);
+    font-size: clamp(8px, 1.6vw, 10px);
+  }
+  
+  .messageInput {
+    padding: clamp(6px, 1.2vw, 10px) clamp(10px, 2vw, 14px);
+  }
+  
+  .inputForm {
+    gap: clamp(4px, 1vw, 6px);
+  }
+  
+  .attachButton,
+  .sendButton {
+    width: clamp(26px, 4vw, 30px);
+    height: clamp(26px, 4vw, 30px);
+  }
+  
+  .messageField {
+    padding: clamp(5px, 1vw, 7px) clamp(10px, 2vw, 12px);
+    font-size: clamp(9px, 1.8vw, 11px);
+    min-height: clamp(28px, 4.5vw, 32px);
+  }
+}
+
+@media (max-width: 360px) {
+  .chatArea {
+    border-radius: clamp(4px, 1vw, 8px);
+  }
+  
+  .messageInput {
+    padding: clamp(5px, 1vw, 8px) clamp(8px, 1.5vw, 12px);
+  }
+  
+  .inputForm {
+    gap: clamp(3px, 0.8vw, 5px);
+  }
+  
+  .attachButton,
+  .sendButton {
+    width: clamp(24px, 3.5vw, 28px);
+    height: clamp(24px, 3.5vw, 28px);
+  }
+  
+  .messageField {
+    padding: clamp(4px, 0.8vw, 6px) clamp(8px, 1.5vw, 10px);
+    font-size: clamp(8px, 1.6vw, 10px);
+    min-height: clamp(26px, 4vw, 30px);
+  }
+  
+  /* Very small mobile message alignment */
+  .sentMessage {
+    max-width: 95%;
+    min-width: clamp(90px, 15vw, 110px);
+    padding-right: clamp(3px, 0.8vw, 6px);
+  }
+  
+  .receivedMessage {
+    max-width: 95%;
+    min-width: clamp(90px, 15vw, 110px);
+  }
+  
+  .sentMessage .messageBubble,
+  .receivedMessage .messageBubble {
+    max-width: clamp(180px, 65vw, 280px);
+  }
+  
+  .messageText {
+    font-size: clamp(8px, 1.6vw, 10px);
+  }
+  
+  /* Very small mobile date separator improvements */
+  .dateSeparator {
+    margin: clamp(6px, 1.2vw, 10px) 0;
+    padding: 0 clamp(4px, 1vw, 8px);
+  }
+  
+  .dateText {
+    padding: clamp(1px, 0.4vw, 3px) clamp(6px, 1.5vw, 10px);
+    font-size: clamp(7px, 1.4vw, 9px);
+  }
+} 
+
+/* Mobile chat area styles */
+.backButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(32px, 6vw, 40px);
+  height: clamp(32px, 6vw, 40px);
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: clamp(8px, 2vw, 12px);
+}
+
+.backButton:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.backButton svg {
+  width: clamp(16px, 3vw, 20px);
+  height: clamp(16px, 3vw, 20px);
+}
+
+/* Mobile chat header adjustments */
+.chatHeader {
+  display: flex;
+  align-items: center;
+  padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 16px);
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  gap: clamp(8px, 2vw, 12px);
+}
+
+.contactInfo {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: clamp(8px, 2vw, 12px);
+}
+
+.contactDetails {
+  flex: 1;
+  min-width: 0;
+}
+
+.contactName {
+  font-size: clamp(14px, 3vw, 16px);
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contactType {
+  font-size: clamp(11px, 2.2vw, 13px);
+  color: #6b7280;
+  display: block;
+  margin-top: clamp(2px, 0.5vw, 4px);
+}
+
+.deleteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(32px, 6vw, 40px);
+  height: clamp(32px, 6vw, 40px);
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.deleteButton:hover {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.deleteButton svg {
+  width: clamp(16px, 3vw, 20px);
+  height: clamp(16px, 3vw, 20px);
+}
+
+/* Mobile message input adjustments */
+.messageInput {
+  padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 16px);
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+}
+
+.inputForm {
+  display: flex;
+  align-items: flex-end;
+  gap: clamp(6px, 1.5vw, 8px);
+  max-width: 100%;
+}
+
+.messageField {
+  flex: 1;
+  padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 16px);
+  border: 1px solid #d1d5db;
+  border-radius: clamp(20px, 4vw, 24px);
+  font-size: clamp(14px, 3vw, 16px);
+  background: #fff;
+  resize: none;
+  min-height: clamp(36px, 6vw, 44px);
+  max-height: clamp(120px, 20vw, 150px);
+}
+
+.messageField:focus {
+  outline: none;
+  border-color: #AF8EBA;
+  box-shadow: 0 0 0 3px rgba(175, 142, 186, 0.1);
+}
+
+.attachButton,
+.sendButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(36px, 6vw, 44px);
+  height: clamp(36px, 6vw, 44px);
+  background: #AF8EBA;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.attachButton:hover,
+.sendButton:hover {
+  background: #9f7ea9;
+  transform: scale(1.05);
+}
+
+.attachButton:disabled,
+.sendButton:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.attachButton svg,
+.sendButton svg {
+  width: clamp(16px, 3vw, 20px);
+  height: clamp(16px, 3vw, 20px);
+} 

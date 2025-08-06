@@ -1,0 +1,590 @@
+.packagesPanel {
+  background: #F6F6F6;
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+  z-index: 10;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.packagesContent {
+  padding: 8px 16px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.packagesHeading {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: #21201F;
+  margin-bottom: 4px;
+  margin-top: 0;
+}
+
+.packagesDescription {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  color: #21201F;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.createPackageSection {
+  background: #F8F8F8;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.createPackageInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.createPackageTitle {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: #21201F;
+  margin: 0;
+}
+
+.createPackageSubtitle {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #21201F;
+  margin: 0;
+}
+
+.createPackageButton {
+  background: #AF8EBA;
+  border: none;
+  border-radius: 18px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  align-self: center;
+  transition: all 0.2s ease;
+}
+
+.createPackageButton:hover {
+  background: #9a7da6;
+  transform: translateY(-1px);
+}
+
+.plusIcon {
+  width: 12px;
+  height: 12px;
+  position: relative;
+}
+
+.plusLine1 {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1.5px;
+  height: 12px;
+  background: #FFFFFF;
+  transform: translateX(-50%);
+}
+
+.plusLine2 {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 12px;
+  height: 1.5px;
+  background: #FFFFFF;
+  transform: translateY(-50%);
+}
+
+.createPackageButton span {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+/* Form Styles */
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formTitle {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #21201F;
+  margin: 0 0 12px 0;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.inputLabel {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #0E0E0E;
+  display: flex;
+  align-items: center;
+}
+
+.required {
+  color: #C7305B;
+  margin-left: 4px;
+}
+
+.textInput {
+  background: #FFFFFF;
+  border: 1px solid #B7B7B7;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #21201F;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.textInput:focus {
+  border-color: #AF8EBA;
+}
+
+.priceInputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.priceInput {
+  background: #FFFFFF;
+  border: 1px solid #B7B7B7;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #21201F;
+  outline: none;
+  flex: 1 1 0;
+  min-width: 0;
+  width: auto;
+  box-sizing: border-box;
+}
+
+.priceInput:focus {
+  border-color: #AF8EBA;
+}
+
+.priceSeparator {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #505050;
+  font-weight: 500;
+  flex-shrink: 0;
+  padding: 0 4px;
+}
+
+.textareaInput {
+  background: #FFFFFF;
+  border: 1px solid #DBDBDB;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #21201F;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.textareaInput:focus {
+  border-color: #AF8EBA;
+}
+
+.textareaInput::placeholder {
+  color: #757575;
+}
+
+/* Features Section */
+.featuresDescription {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 14.75px;
+  line-height: 23px;
+  color: #505050;
+  margin: 4px 0 12px 0;
+}
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.featureInputRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.featureInput {
+  background: #FFFFFF;
+  border: 1px solid #B7B7B7;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+  color: #21201F;
+  outline: none;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.featureInput:focus {
+  border-color: #AF8EBA;
+}
+
+.featureInput::placeholder {
+  color: #757575;
+}
+
+.removeFeatureBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.removeFeatureBtn:hover {
+  background-color: #f0f0f0;
+}
+
+.removeIcon {
+  font-size: 18px;
+  color: #757575;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.addFeatureButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  align-self: flex-start;
+  transition: opacity 0.2s ease;
+}
+
+.addFeatureButton:hover {
+  opacity: 0.7;
+}
+
+.plusIcon {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.plusLine1 {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1.5px;
+  height: 16px;
+  background: #0E0E0E;
+  transform: translateX(-50%);
+}
+
+.plusLine2 {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 16px;
+  height: 1.5px;
+  background: #0E0E0E;
+  transform: translateY(-50%);
+}
+
+.addFeatureButton span {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 15.25px;
+  line-height: 19px;
+  color: #0E0E0E;
+  text-decoration-line: underline;
+}
+
+/* Back Button */
+.sidebar-back-btn {
+  background: none;
+  border: none;
+  color: #000;
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  margin: 8px 0 4px 35px;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+}
+
+.sidebar-back-btn:hover {
+  text-decoration: underline;
+}
+
+.backIcon {
+  width: 24px;
+  height: 20px;
+  position: relative;
+  margin-right: 8px;
+}
+
+.backArrow {
+  position: absolute;
+  left: 25.69%;
+  right: 25.7%;
+  top: 50%;
+  bottom: 50%;
+  border: 1.67px solid #000000;
+  transform: translateY(-50%);
+}
+
+.backArrow::before {
+  content: '';
+  position: absolute;
+  left: 25.69%;
+  right: 60.42%;
+  top: 50%;
+  bottom: 33.33%;
+  border: 1.67px solid #000000;
+  transform: translateY(-50%);
+}
+
+.backArrow::after {
+  content: '';
+  position: absolute;
+  left: 25.69%;
+  right: 60.42%;
+  top: 33.34%;
+  bottom: 49.99%;
+  border: 1.67px solid #000000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .formContainer {
+    gap: 16px;
+  }
+  
+  .featuresList {
+    gap: 6px;
+  }
+  
+  .featureItem {
+    padding: 8px 10px;
+    min-height: 40px;
+  }
+}
+
+.packageButton {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #AF8EBA;
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: box-shadow 0.15s, border-color 0.15s;
+  box-shadow: 0 1px 4px rgba(175, 142, 186, 0.07);
+}
+.packageButton:hover {
+  border-color: #a084ca;
+  box-shadow: 0 2px 8px rgba(175, 142, 186, 0.13);
+  background: #faf6ff;
+}
+.packageName {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: #21201F;
+  margin-bottom: 4px;
+}
+.packagePrice {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #AF8EBA;
+  margin-bottom: 4px;
+}
+.packageDescription {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #4A4A4A;
+}
+
+.packageButtonWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+}
+.deleteBinBtn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.packageButtonWrapper:hover .deleteBinBtn {
+  opacity: 1;
+}
+.deleteBinBtn svg {
+  display: block;
+}
+
+.deleteConfirmOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.deleteConfirmBox {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px 28px 24px 28px;
+  box-shadow: 0 4px 32px rgba(175, 142, 186, 0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+}
+.deleteConfirmText {
+  font-family: 'Outfit', sans-serif;
+  font-size: 17px;
+  color: #21201F;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.deleteConfirmActions {
+  display: flex;
+  gap: 18px;
+}
+.deleteConfirmBtn {
+  background: #AF8EBA;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  padding: 8px 28px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.deleteConfirmBtn:hover {
+  background: #a084ca;
+}
+.deleteCancelBtn {
+  background: #fff;
+  color: #AF8EBA;
+  border: 1.5px solid #AF8EBA;
+  border-radius: 100px;
+  padding: 8px 28px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.deleteCancelBtn:hover {
+  background: #faf6ff;
+  color: #a084ca;
+} 

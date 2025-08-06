@@ -1,0 +1,102 @@
+.avatarContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #9CA3AF;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.initials {
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1;
+  user-select: none;
+}
+
+/* Size variations */
+.small {
+  width: 32px;
+  height: 32px;
+}
+
+.small .initials {
+  font-size: 12px;
+}
+
+.medium {
+  width: 40px;
+  height: 40px;
+}
+
+.medium .initials {
+  font-size: 14px;
+}
+
+.large {
+  width: 48px;
+  height: 48px;
+}
+
+.large .initials {
+  font-size: 16px;
+}
+
+.xlarge {
+  width: 64px;
+  height: 64px;
+}
+
+.xlarge .initials {
+  font-size: 20px;
+}
+
+.profile {
+  width: 120px;
+  height: 120px;
+}
+
+.profile .initials {
+  font-size: 2.5rem;
+}
+
+/* Online indicator */
+.onlineIndicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #22C55E;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.small .onlineIndicator {
+  width: 8px;
+  height: 8px;
+  border-width: 1px;
+}
+
+.large .onlineIndicator,
+.xlarge .onlineIndicator {
+  width: 14px;
+  height: 14px;
+  border-width: 3px;
+}

@@ -1,0 +1,625 @@
+.orders-root {
+  width: 100%;
+  min-height: 100vh;
+  background: transparent;
+  padding: clamp(1rem, 3vw, 2rem);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.orders-header-row {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 1.5vw, 1rem);
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+.orders-header-title {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.25rem, 0.8vw, 0.5rem);
+}
+
+.orders-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: #23213D;
+  margin: 0;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #23213D 0%, #4A4A6A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.orders-subtitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #6B7280;
+  margin: 0;
+  font-weight: 400;
+}
+
+.orders-main-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 320px) 1fr;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  align-items: start;
+}
+
+.orders-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 3vw, 1.75rem);
+  position: sticky;
+  top: clamp(1rem, 3vw, 2rem);
+}
+
+.orders-filter-card, 
+.orders-quick-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: clamp(1rem, 2.5vw, 1.5rem);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2.5vw, 1.25rem);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.orders-filter-card:hover,
+.orders-quick-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.12),
+    0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.orders-filter-title, 
+.orders-quick-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  color: #23213D;
+  margin: 0 0 clamp(0.75rem, 2vw, 1rem) 0;
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 1.5vw, 0.75rem);
+}
+
+.orders-filter-title::before {
+  content: '🔍';
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.orders-quick-title::before {
+  content: '⚡';
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.orders-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 1.5vw, 0.75rem);
+  margin-bottom: clamp(0.75rem, 2vw, 1rem);
+}
+
+.orders-filter-group:last-child {
+  margin-bottom: 0;
+}
+
+.orders-filter-group label {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: #374151;
+  font-weight: 500;
+  margin: 0;
+}
+
+.orders-filter-group select {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  border-radius: clamp(0.5rem, 1.5vw, 0.75rem);
+  border: 2px solid #E5E7EB;
+  padding: clamp(0.75rem, 2vw, 1rem) clamp(1rem, 2.5vw, 1.25rem);
+  background: #FFFFFF;
+  color: #374151;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right clamp(0.75rem, 2vw, 1rem) center;
+  background-repeat: no-repeat;
+  background-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.orders-filter-group select:focus {
+  outline: none;
+  border-color: #AF8EBA;
+  box-shadow: 0 0 0 3px rgba(175, 142, 186, 0.1);
+}
+
+.orders-filter-group select:hover {
+  border-color: #D1D5DB;
+}
+
+.orders-quick-action {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: #374151;
+  background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+  border-radius: clamp(0.5rem, 1.5vw, 0.75rem);
+  padding: clamp(0.75rem, 2vw, 1rem) clamp(1rem, 2.5vw, 1.25rem);
+  margin-bottom: clamp(0.5rem, 1.5vw, 0.75rem);
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 2vw, 1rem);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #E5E7EB;
+  font-weight: 500;
+}
+
+.orders-quick-action:last-child {
+  margin-bottom: 0;
+}
+
+.orders-quick-action:hover {
+  background: linear-gradient(135deg, #AF8EBA 0%, #9A7BA5 100%);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(175, 142, 186, 0.3);
+}
+
+.orders-list-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 4vw, 2rem);
+}
+
+.orders-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: clamp(1rem, 2.5vw, 1.5rem);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: clamp(1.5rem, 4vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 3vw, 1.5rem);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.orders-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.12),
+    0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.orders-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: clamp(1rem, 3vw, 1.5rem);
+  flex-wrap: wrap;
+}
+
+.orders-card-id {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  color: #6B7280;
+  font-weight: 500;
+  margin-bottom: clamp(0.25rem, 0.8vw, 0.5rem);
+}
+
+.orders-card-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  color: #23213D;
+  font-weight: 600;
+  margin-bottom: clamp(0.5rem, 1.5vw, 0.75rem);
+  line-height: 1.3;
+}
+
+.orders-card-meta {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: #6B7280;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.5rem, 1.5vw, 0.75rem);
+  align-items: center;
+}
+
+.orders-card-total {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: clamp(0.25rem, 0.8vw, 0.5rem);
+  min-width: fit-content;
+}
+
+.orders-card-amount {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  color: #23213D;
+  font-weight: 700;
+}
+
+.orders-card-paid {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  color: #059669;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: clamp(0.25rem, 0.8vw, 0.5rem);
+}
+
+.paid-dot {
+  width: clamp(0.5rem, 1.5vw, 0.75rem);
+  height: clamp(0.5rem, 1.5vw, 0.75rem);
+  background: #059669;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.orders-vendor-row {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.orders-vendor-card {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.5vw, 1.25rem);
+  padding: clamp(1rem, 2.5vw, 1.25rem);
+  background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+  border-radius: clamp(0.75rem, 2vw, 1rem);
+  border: 1px solid #E5E7EB;
+  transition: all 0.3s ease;
+}
+
+.orders-vendor-card:hover {
+  background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+  border-color: #AF8EBA;
+  transform: translateX(4px);
+}
+
+.orders-vendor-img {
+  width: clamp(3rem, 8vw, 4rem);
+  height: clamp(3rem, 8vw, 4rem);
+  border-radius: clamp(0.5rem, 1.5vw, 0.75rem);
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #E5E7EB;
+}
+
+.orders-vendor-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.25rem, 0.8vw, 0.5rem);
+  min-width: 0;
+}
+
+.orders-vendor-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  color: #23213D;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.orders-vendor-type {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: #6B7280;
+  font-weight: 500;
+}
+
+.orders-vendor-status {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  font-weight: 600;
+  padding: clamp(0.25rem, 0.8vw, 0.5rem) clamp(0.5rem, 1.5vw, 0.75rem);
+  border-radius: clamp(0.25rem, 0.8vw, 0.5rem);
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.orders-vendor-status.confirmed {
+  background: #DEF7EC;
+  color: #03543F;
+}
+
+.orders-vendor-status.completed {
+  background: #E0F2FE;
+  color: #0C4A6E;
+}
+
+.orders-vendor-status.pending {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+.orders-vendor-price {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  color: #23213D;
+  font-weight: 700;
+  text-align: right;
+  min-width: fit-content;
+}
+
+.orders-vendor-msg {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: #AF8EBA;
+  background: rgba(175, 142, 186, 0.1);
+  border: 1px solid rgba(175, 142, 186, 0.2);
+  border-radius: clamp(0.5rem, 1.5vw, 0.75rem);
+  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 2.5vw, 1.25rem);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  text-align: center;
+  margin-top: clamp(0.5rem, 1.5vw, 0.75rem);
+}
+
+.orders-vendor-msg:hover {
+  background: rgba(175, 142, 186, 0.2);
+  border-color: rgba(175, 142, 186, 0.4);
+  transform: translateY(-1px);
+}
+
+.orders-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.75rem, 2vw, 1rem);
+  margin-top: clamp(0.5rem, 1.5vw, 0.75rem);
+}
+
+.orders-action-btn {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  padding: clamp(0.75rem, 2vw, 1rem) clamp(1.25rem, 3vw, 1.5rem);
+  border-radius: clamp(0.5rem, 1.5vw, 0.75rem);
+  border: 2px solid #E5E7EB;
+  background: #FFFFFF;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(0.5rem, 1.5vw, 0.75rem);
+  white-space: nowrap;
+}
+
+.orders-action-btn.request-cancellation {
+  border-color: #FCA5A5;
+  color: #DC2626;
+  background: #FEF2F2;
+}
+
+.orders-action-btn.request-cancellation:hover {
+  background: #DC2626;
+  color: #FFFFFF;
+  border-color: #DC2626;
+}
+
+.orders-action-btn.download-invoices {
+  border-color: #AF8EBA;
+  color: #AF8EBA;
+  background: rgba(175, 142, 186, 0.1);
+}
+
+.orders-action-btn.book-again, 
+.orders-action-btn.rate-experience {
+  border-color: #10B981;
+  color: #059669;
+  background: #ECFDF5;
+}
+
+.orders-action-btn.active, 
+.orders-action-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(175, 142, 186, 0.1);
+}
+
+.orders-action-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.orders-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.5rem, 1.5vw, 0.75rem);
+  margin-top: clamp(2rem, 5vw, 3rem);
+  flex-wrap: wrap;
+}
+
+.orders-pagination button {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  padding: clamp(0.75rem, 2vw, 1rem) clamp(1rem, 2.5vw, 1.25rem);
+  border-radius: clamp(0.5rem, 1.5vw, 0.75rem);
+  border: 2px solid #E5E7EB;
+  background: #FFFFFF;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  min-width: clamp(2.5rem, 6vw, 3rem);
+}
+
+.orders-pagination button.active, 
+.orders-pagination button:focus {
+  background: #AF8EBA;
+  color: #FFFFFF;
+  border-color: #AF8EBA;
+}
+
+.orders-pagination button:hover {
+  background: #F3F4F6;
+  border-color: #D1D5DB;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .orders-main-grid {
+    grid-template-columns: minmax(250px, 300px) 1fr;
+    gap: clamp(1.25rem, 3vw, 1.75rem);
+  }
+}
+
+@media (max-width: 1024px) {
+  .orders-main-grid {
+    grid-template-columns: 1fr;
+    gap: clamp(1.5rem, 4vw, 2rem);
+  }
+  
+  .orders-sidebar {
+    position: static;
+    order: 2;
+  }
+  
+  .orders-list-section {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .orders-root {
+    padding: clamp(0.75rem, 2.5vw, 1.5rem);
+  }
+  
+  .orders-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(0.75rem, 2vw, 1rem);
+  }
+  
+  .orders-card-total {
+    align-items: flex-start;
+  }
+  
+  .orders-vendor-card {
+    flex-direction: column;
+    text-align: center;
+    gap: clamp(0.75rem, 2vw, 1rem);
+  }
+  
+  .orders-vendor-price {
+    text-align: center;
+  }
+  
+  .orders-card-actions {
+    justify-content: center;
+  }
+  
+  .orders-filter-card, 
+  .orders-quick-card {
+    padding: clamp(1rem, 2.5vw, 1.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .orders-root {
+    padding: clamp(0.5rem, 2vw, 1rem);
+  }
+  
+  .orders-title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+  
+  .orders-subtitle {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  }
+  
+  .orders-card {
+    padding: clamp(1rem, 3vw, 1.5rem);
+  }
+  
+  .orders-action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .orders-pagination {
+    gap: clamp(0.25rem, 1vw, 0.5rem);
+  }
+  
+  .orders-pagination button {
+    padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(0.75rem, 2vw, 1rem);
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+  }
+}
+
+/* Loading State */
+.orders-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: #6B7280;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: clamp(1rem, 2.5vw, 1.5rem);
+  padding: clamp(2rem, 5vw, 3rem);
+}
+
+/* Empty State */
+.orders-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  text-align: center;
+  gap: clamp(1rem, 3vw, 1.5rem);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: clamp(1rem, 2.5vw, 1.5rem);
+  padding: clamp(2rem, 5vw, 3rem);
+}
+
+.orders-empty-icon {
+  font-size: clamp(3rem, 8vw, 4rem);
+  color: #D1D5DB;
+}
+
+.orders-empty-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  color: #374151;
+  font-weight: 600;
+  margin: 0;
+}
+
+.orders-empty-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  color: #6B7280;
+  margin: 0;
+  max-width: 400px;
+} 

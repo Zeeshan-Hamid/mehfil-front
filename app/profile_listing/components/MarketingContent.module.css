@@ -1,0 +1,226 @@
+.marketingRoot {
+  width: 100%;
+  max-width: 1162px;
+  margin: 32px auto 0 auto;
+  /* Increased margin-top for space below top bar */
+  padding: 40px 16px 48px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.35); /* glassmorphic background */
+  box-sizing: border-box;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 2px 8px rgba(0,0,0,0.06); /* glassmorphic shadow */
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
+}
+
+/* Mobile responsive bottom padding */
+@media (max-width: 600px) {
+  .marketingRoot {
+    padding-bottom: clamp(3rem, 8vh, 4rem);
+  }
+}
+
+.featuredVendorTitle {
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #000;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.featuredVendorDescription {
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.7rem;
+  color: #222;
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 32px;
+}
+
+.benefitsTitle {
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #000;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.benefitsRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.benefitCard {
+  position: relative;
+  background: #FFEBEC;
+  box-shadow: 0 4px 16px 0 rgba(224, 222, 222, 0.18);
+  border-radius: 14px;
+  width: 240px;
+  min-width: 200px;
+  max-width: 100%;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 18px 24px 18px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.benefitCardBg {
+  display: none;
+}
+
+.benefitCardIcon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefitCardTitle {
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  color: #000;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.benefitCardDesc {
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.95rem;
+  line-height: 1.3rem;
+  color: #40433B;
+  text-align: center;
+}
+
+.pricingTitle {
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #000;
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.pricingDescription {
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.7rem;
+  color: #222;
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.enrollBtnRow {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.enrollBtn {
+  background: #9CAD89;
+  color: #fff;
+  border: none;
+  border-radius: 32px;
+  padding: 14px 48px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(80,40,120,0.08);
+  transition: background 0.18s, transform 0.18s;
+}
+.enrollBtn:hover {
+  background: #7e9a6a;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .marketingRoot {
+    max-width: 98vw;
+    padding: 24px 4vw 32px 4vw;
+  }
+  .benefitsRow {
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .benefitCard {
+    width: 48vw;
+    min-width: 160px;
+    padding: 24px 8px 18px 8px;
+  }
+  .featuredVendorTitle, .benefitsTitle, .pricingTitle {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+  .featuredVendorDescription, .pricingDescription {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .marketingRoot {
+    max-width: 100vw;
+    padding: 12px 2vw 18px 2vw;
+  }
+  .benefitsRow {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .benefitCard {
+    width: 100%;
+    min-width: 0;
+    padding: 16px 4px 12px 4px;
+  }
+  .featuredVendorTitle, .benefitsTitle, .pricingTitle {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+  .featuredVendorDescription, .pricingDescription {
+    font-size: 0.95rem;
+    line-height: 1.1rem;
+    max-width: 100vw;
+  }
+  .enrollBtn {
+    font-size: 1rem;
+    padding: 10px 18px;
+    border-radius: 24px;
+  }
+} 

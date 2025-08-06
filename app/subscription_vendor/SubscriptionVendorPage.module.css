@@ -1,0 +1,996 @@
+.subscriptionContainer {
+  background: #fff;
+  border-radius: clamp(16px, 3vw, 24px);
+  box-shadow: 0 4px 32px 0 rgba(80,40,120,0.08);
+  max-width: clamp(300px, 90vw, 420px);
+  margin: clamp(40px, 8vh, 80px) auto 0 auto;
+  padding: clamp(24px, 4vw, 48px) clamp(16px, 3vw, 32px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  margin-bottom: clamp(8px, 1.5vh, 16px);
+  color: #8B6B9A;
+}
+
+.description {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  color: #333;
+  margin-bottom: clamp(16px, 3vh, 32px);
+  text-align: center;
+}
+
+.optionsPlaceholder {
+  width: 100%;
+  min-height: clamp(60px, 8vh, 80px);
+  background: #F7F3FF;
+  border-radius: clamp(8px, 1.5vw, 12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: clamp(16px, 3vh, 32px);
+}
+
+.subscribeBtn {
+  background: #9CAD88;
+  color: #fff;
+  width: 100%;
+  height: clamp(40px, 5vh, 48px);
+  border-radius: clamp(32px, 6vw, 44px);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: clamp(14px, 1.8vw, 16px);
+  line-height: 1;
+  transition: background 0.2s;
+  cursor: pointer;
+  border: none;
+}
+
+.subscribeBtn:hover {
+  background: #7e9a6a;
+}
+
+.topSectionBg {
+  position: relative;
+  width: 100%;
+  min-height: clamp(50vh, 60vh, 75vh);
+  background: linear-gradient(180deg, #C4AAD9 11.06%, #9D69C7 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0 clamp(24px, 4vh, 48px) 0;
+  overflow: visible;
+}
+
+.brandGroup {
+  position: absolute;
+  top: clamp(20px, 3vh, 40px);
+  left: clamp(16px, 3vw, 48px);
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1.5vw, 12px);
+}
+
+.logoImg {
+  width: clamp(28px, 3.5vw, 36px);
+  height: clamp(28px, 3.5vw, 36px);
+  background: url('/logo.png') no-repeat center/contain;
+}
+
+.MehfilText {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: clamp(14px, 2vw, 18px);
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.homeGroup {
+  position: absolute;
+  top: clamp(24px, 4vh, 48px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+.homeText {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: clamp(12px, 1.8vw, 16px);
+  color: #fff;
+  opacity: 0.9;
+}
+
+.avatarGroup {
+  position: absolute;
+  top: clamp(18px, 3vh, 36px);
+  right: clamp(16px, 3vw, 48px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 20;
+  pointer-events: auto;
+}
+
+.avatarImg {
+  width: clamp(36px, 5vw, 48px);
+  height: clamp(36px, 5vw, 48px);
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.pricingBadge {
+  margin-top: clamp(60px, 10vh, 120px);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: #000;
+  background: none;
+  text-align: center;
+}
+
+.topHeading {
+  margin-top: clamp(8px, 1.5vh, 16px);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 5vw, 55px);
+  line-height: 1.2;
+  color: #fff;
+  text-align: center;
+  padding: 0 clamp(16px, 3vw, 32px);
+}
+
+.toggleGroup {
+  margin-top: clamp(16px, 3vh, 32px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  border-radius: clamp(24px, 5vw, 36px);
+  background: none;
+}
+
+.monthlyToggle {
+  background: #000;
+  color: #fff;
+  border-radius: clamp(24px, 5vw, 36px) 0 0 clamp(24px, 5vw, 36px);
+  padding: clamp(8px, 1.5vh, 12px) clamp(20px, 4vw, 36px);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: clamp(14px, 2vw, 18px);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.yearlyToggle {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 0 clamp(24px, 5vw, 36px) clamp(24px, 5vw, 36px) 0;
+  padding: clamp(8px, 1.5vh, 12px) clamp(20px, 4vw, 36px);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 2vw, 18px);
+  border-left: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.monthlyToggleActive {
+  background: #000;
+  color: #fff;
+  border-radius: clamp(24px, 5vw, 36px) 0 0 clamp(24px, 5vw, 36px);
+  padding: clamp(8px, 1.5vh, 12px) clamp(20px, 4vw, 36px);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: clamp(14px, 2vw, 18px);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.yearlyToggleActive {
+  background: #fff;
+  color: #9D69C7;
+  border: 1px solid #9D69C7;
+  border-radius: 0 clamp(24px, 5vw, 36px) clamp(24px, 5vw, 36px) 0;
+  padding: clamp(8px, 1.5vh, 12px) clamp(20px, 4vw, 36px);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: clamp(14px, 2vw, 18px);
+  border-left: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.bottomSectionBg {
+  width: 100%;
+  min-height: clamp(40vh, 50vh, 60vh);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: clamp(48px, 8vh, 96px) 0 clamp(48px, 8vh, 96px) 0;
+}
+
+.bottomSectionContent {
+  width: 100%;
+  max-width: clamp(800px, 90vw, 1200px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottomSectionNav {
+  width: 100%;
+  max-width: clamp(800px, 90vw, 1200px);
+  margin: clamp(-20px, -3vh, -40px) auto clamp(4px, 1vh, 8px) auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(8px, 1.5vw, 16px);
+}
+
+.backBtn {
+  padding: clamp(8px, 1.5vh, 10px) clamp(20px, 3vw, 33px);
+  border: 1px solid #AF8EBA;
+  border-radius: clamp(32px, 6vw, 44px);
+  background: #fff;
+  color: #AF8EBA;
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(12px, 1.8vw, 16px);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.continueBtn {
+  padding: clamp(8px, 1.5vh, 10px) clamp(20px, 3vw, 33px);
+  border: none;
+  border-radius: clamp(32px, 6vw, 44px);
+  background: #AF8EBA;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(12px, 1.8vw, 16px);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.featuresCard {
+  width: 100%;
+  max-width: clamp(600px, 85vw, 900px);
+  background: #FDFDFD;
+  border-radius: clamp(12px, 2vw, 16px);
+  box-shadow: 2px 2px 14.6px rgba(0, 0, 0, 0.12);
+  padding: clamp(24px, 4vw, 48px) clamp(16px, 3vw, 32px);
+  margin: 0 auto clamp(16px, 3vh, 32px) auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featuresGrid {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: clamp(24px, 4vw, 48px);
+  flex-wrap: wrap;
+}
+
+.featuresCol {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 2vh, 24px);
+  flex: 1;
+  min-width: clamp(200px, 40vw, 300px);
+}
+
+.featureRow {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1.5vw, 12px);
+}
+
+.checkCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(18px, 2.5vw, 24px);
+  height: clamp(18px, 2.5vw, 24px);
+}
+
+.featureText {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(12px, 1.8vw, 16px);
+  font-weight: 500;
+  color: #1C2348;
+}
+
+.bottomLogoGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 1.5vw, 12px);
+  margin: clamp(16px, 3vh, 32px) 0 clamp(8px, 1.5vh, 16px) 0;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.bottomLogoIcon {
+  width: clamp(32px, 4vw, 40px);
+  height: clamp(38px, 5vw, 48px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottomLogoText {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(16px, 2.5vw, 22px);
+  font-weight: 500;
+  background: linear-gradient(90deg, #C4AAD9 17.79%, #9F6FC6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.subscribeForm {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 1.5vw, 16px);
+  margin-bottom: clamp(12px, 2vh, 24px);
+  flex-wrap: wrap;
+}
+
+.emailInput {
+  width: clamp(200px, 40vw, 260px);
+  height: clamp(40px, 5vh, 48px);
+  border: 2px solid #E7E7E9;
+  border-radius: clamp(24px, 5vw, 37px);
+  padding: 0 clamp(12px, 2vw, 20px);
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(12px, 1.8vw, 14px);
+  color: #333;
+  background: #fff;
+  outline: none;
+}
+
+.emailInput::placeholder {
+  color: #A9A9A9;
+  opacity: 1;
+}
+
+.subscribeBtn2 {
+  padding: clamp(10px, 1.8vh, 13px) clamp(16px, 3vw, 26px);
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-radius: clamp(60px, 10vw, 90px);
+  background: #9CAD89;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(12px, 1.8vw, 15px);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.subscribeBtn2:hover {
+  background: #7e9a6a;
+}
+
+.standardCard {
+  background: #fff;
+  border-radius: clamp(20px, 4vw, 28px);
+  box-shadow: 0 4px 24px 0 rgba(80,40,120,0.08);
+  width: clamp(280px, 85vw, 320px);
+  padding: clamp(20px, 3vw, 32px) clamp(16px, 2.5vw, 24px) clamp(16px, 2.5vw, 24px) clamp(16px, 2.5vw, 24px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardIconWrapper {
+  background: linear-gradient(135deg, #E6E6FA 0%, #C4AAD9 100%);
+  border-radius: 50%;
+  width: clamp(48px, 7vw, 64px);
+  height: clamp(48px, 7vw, 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: clamp(8px, 1.5vh, 12px);
+}
+
+.cardTitleRow {
+  margin-bottom: clamp(2px, 0.5vh, 4px);
+  width: 100%;
+  text-align: left;
+}
+
+.cardTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(14px, 2.2vw, 18px);
+  font-weight: 600;
+  color: #222;
+}
+
+.cardPriceRow {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(4px, 1vw, 8px);
+  margin-bottom: clamp(8px, 1.5vh, 12px);
+  width: 100%;
+  text-align: left;
+}
+
+.cardPrice {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 700;
+  color: #222;
+}
+
+.cardPerMonth {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(12px, 2vw, 16px);
+  font-weight: 400;
+  color: #A9A9A9;
+}
+
+.cardDivider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #E7E7E9;
+  margin: clamp(12px, 2vh, 16px) 0 clamp(16px, 2.5vh, 20px) 0;
+}
+
+.cardFeaturesList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 clamp(20px, 3vh, 28px) 0;
+  width: 100%;
+}
+
+.cardFeatureItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: clamp(12px, 2vh, 16px);
+}
+
+.cardFeatureText {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(12px, 2vw, 16px);
+  color: #1C2348;
+}
+
+.cardCheckCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(18px, 2.5vw, 24px);
+  height: clamp(18px, 2.5vw, 24px);
+}
+
+.cardStartBtn {
+  width: 100%;
+  padding: clamp(12px, 2vh, 16px) 0;
+  background: #F7F8FA;
+  color: #222;
+  border: none;
+  border-radius: clamp(12px, 2.5vw, 18px);
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(14px, 2.2vw, 18px);
+  font-weight: 600;
+  margin-top: clamp(6px, 1vh, 8px);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cardStartBtn:hover {
+  background: #ececec;
+}
+
+.proCard {
+  background: #fff;
+  border-radius: clamp(20px, 4vw, 28px);
+  box-shadow: 0 4px 24px 0 rgba(80,40,120,0.08);
+  width: clamp(280px, 85vw, 320px);
+  padding: clamp(20px, 3vw, 32px) clamp(16px, 2.5vw, 24px) clamp(16px, 2.5vw, 24px) clamp(16px, 2.5vw, 24px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardUnlockBtn {
+  width: 100%;
+  padding: clamp(12px, 2vh, 16px) 0;
+  background: #AF8EBA;
+  color: #fff;
+  border: none;
+  border-radius: clamp(12px, 2.5vw, 18px);
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(14px, 2.2vw, 18px);
+  font-weight: 600;
+  margin-top: clamp(6px, 1vh, 8px);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cardUnlockBtn:hover {
+  background: #9F6FC6;
+}
+
+.cardsRowWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(40px, 8vw, 80px);
+  position: relative;
+  margin-top: clamp(-80px, -12vh, -160px);
+  z-index: 2;
+  flex-wrap: wrap;
+}
+
+.featuresCardBanner {
+  width: clamp(600px, 85vw, 720px);
+  max-width: clamp(600px, 85vw, 720px);
+  background: #fff;
+  border-radius: clamp(12px, 2vw, 16px);
+  box-shadow: 2px 2px 14.6px rgba(0, 0, 0, 0.08);
+  padding: clamp(20px, 3vw, 28px) clamp(16px, 2.5vw, 24px);
+  margin: 0 auto clamp(16px, 3vh, 32px) auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.featuresGridBanner {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.featuresColBanner {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 2vh, 18px);
+  align-items: flex-start;
+  width: clamp(280px, 40vw, 320px);
+  min-width: clamp(250px, 35vw, 280px);
+  max-width: clamp(300px, 45vw, 320px);
+}
+
+.featureRowBanner {
+  display: flex;
+  align-items: center;
+  gap: clamp(6px, 1vw, 10px);
+}
+
+.checkCircleBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(16px, 2.2vw, 20px);
+  height: clamp(16px, 2.2vw, 20px);
+}
+
+.featureTextBanner {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(12px, 2vw, 16px);
+  font-weight: 400;
+  color: #1C2348;
+  text-align: left;
+}
+
+.toggleGroupSlider {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: clamp(200px, 40vw, 260px);
+  height: clamp(40px, 5vh, 48px);
+  background: #fff;
+  border-radius: clamp(24px, 5vw, 36px);
+  box-shadow: 0 2px 8px 0 rgba(80,40,120,0.04);
+  overflow: hidden;
+  margin: clamp(16px, 3vh, 32px) 0 0 0;
+}
+
+.toggleSliderBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #000;
+  border-radius: clamp(24px, 5vw, 36px);
+  transition: left 0.3s cubic-bezier(0.4,0,0.2,1);
+  z-index: 1;
+}
+
+.toggleBtn {
+  flex: 1 1 50%;
+  height: clamp(40px, 5vh, 48px);
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(14px, 2.2vw, 18px);
+  font-weight: 600;
+  color: #9D69C7;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: clamp(24px, 5vw, 36px);
+  transition: color 0.2s;
+}
+
+.toggleBtnActive {
+  flex: 1 1 50%;
+  height: clamp(40px, 5vh, 48px);
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(14px, 2.2vw, 18px);
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: clamp(24px, 5vw, 36px);
+  transition: color 0.2s;
+}
+
+.homeBtn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(12px, 1.8vw, 16px);
+  font-weight: 400;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.homeBtn:hover {
+  color: #9D69C7;
+}
+
+
+
+/* Profile Menu Drawer for Subscription Page */
+.profile-photo-business-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: clamp(6px, 1vw, 12px);
+  cursor: pointer;
+}
+
+.profile-photo-large {
+  width: clamp(34px, 4vw, 48px);
+  height: clamp(34px, 4vw, 48px);
+  background: #FFC7D4;
+  border-radius: clamp(8px, 1vw, 16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9A7DA6;
+  font-weight: 700;
+  font-size: clamp(16px, 2vw, 22px);
+  user-select: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.profile-menu-drawer {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: clamp(6px, 1vw, 12px);
+  min-width: clamp(140px, 18vw, 180px);
+  background: #fff;
+  border-radius: clamp(8px, 1vw, 16px);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  z-index: 9999;
+  padding: clamp(6px, 1vw, 12px) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.profile-menu-logout-btn {
+  background: none;
+  border: none;
+  color: #222;
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(11px, 1.4vw, 15px);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding: clamp(8px, 1.2vh, 10px) clamp(12px, 2vw, 20px);
+  cursor: pointer;
+  transition: background 0.15s;
+  border-radius: clamp(8px, 1vw, 16px);
+}
+
+.profile-menu-logout-btn:hover {
+  background: #f5f5f5;
+}
+
+/* Mobile Features Sections - Only visible on mobile */
+.mobileFeaturesSection {
+  display: none;
+  width: 100%;
+  max-width: clamp(280px, 90vw, 400px);
+  background: #FDFDFD;
+  border-radius: clamp(12px, 2vw, 16px);
+  box-shadow: 2px 2px 14.6px rgba(0, 0, 0, 0.08);
+  padding: clamp(16px, 2.5vw, 20px) clamp(12px, 2vw, 16px);
+  margin: clamp(8px, 1.5vh, 12px) 0;
+}
+
+.mobileFeaturesLeft, .mobileFeaturesRight {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 2vh, 16px);
+  align-items: flex-start;
+}
+
+.mobileFeatureRow {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1.5vw, 12px);
+}
+
+.mobileCheckCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(16px, 2.2vw, 20px);
+  height: clamp(16px, 2.2vw, 20px);
+  flex-shrink: 0;
+}
+
+.mobileFeatureText {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(12px, 2vw, 16px);
+  font-weight: 400;
+  color: #1C2348;
+  text-align: left;
+  line-height: 1.4;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+  .cardsRowWrapper {
+    gap: clamp(20px, 4vw, 32px);
+    width: 100%;
+  }
+  
+  .featuresCardBanner {
+    width: clamp(500px, 90vw, 95vw);
+    max-width: clamp(500px, 90vw, 95vw);
+    min-width: 0;
+    padding: clamp(16px, 2.5vw, 20px) clamp(6px, 1vw, 8px);
+  }
+}
+
+@media (max-width: 900px) {
+  .topHeading {
+    font-size: clamp(20px, 4vw, 32px);
+    line-height: 1.3;
+  }
+  
+  .pricingBadge {
+    font-size: clamp(12px, 2.2vw, 16px);
+    margin-top: clamp(40px, 8vh, 80px);
+  }
+  
+  .brandGroup {
+    left: clamp(8px, 2vw, 16px);
+  }
+  
+  .avatarGroup {
+    right: clamp(8px, 2vw, 16px);
+    z-index: 20;
+  }
+  
+  .cardsRowWrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(20px, 4vh, 32px);
+    margin-top: clamp(-40px, -8vh, -80px);
+  }
+  
+  .standardCard, .proCard {
+    width: clamp(280px, 90vw, 400px);
+    min-width: 0;
+    max-width: clamp(300px, 95vw, 400px);
+  }
+  
+  /* Show mobile features sections on mobile */
+  .mobileFeaturesSection {
+    display: block;
+  }
+  
+  .featuresCardBanner {
+    width: clamp(400px, 95vw, 98vw);
+    max-width: clamp(400px, 95vw, 98vw);
+    min-width: 0;
+    padding: clamp(12px, 2vw, 16px) clamp(2px, 0.5vw, 4px);
+  }
+  
+  .featuresGridBanner {
+    flex-direction: column;
+    gap: clamp(16px, 3vh, 24px);
+    align-items: center;
+  }
+  
+  .featuresColBanner {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .subscriptionContainer {
+    padding: clamp(12px, 2vw, 24px) clamp(4px, 1vw, 8px);
+    margin: clamp(20px, 4vh, 40px) clamp(4px, 1vw, 8px) 0 clamp(4px, 1vw, 8px);
+  }
+  
+  .topSectionBg {
+    min-height: clamp(40vh, 50vh, 60vh);
+    height: auto;
+    padding-bottom: clamp(8px, 2vh, 16px);
+  }
+  
+  .toggleGroupSlider {
+    width: clamp(180px, 98vw, 100vw);
+    min-width: 0;
+    max-width: clamp(200px, 100vw, 100vw);
+    height: clamp(36px, 5vh, 44px);
+  }
+  
+  .cardsRowWrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(16px, 3vh, 24px);
+    margin-top: clamp(-20px, -4vh, -40px);
+  }
+  
+  .standardCard, .proCard {
+    width: clamp(260px, 98vw, 340px);
+    min-width: 0;
+    max-width: clamp(280px, 100vw, 340px);
+    padding: clamp(16px, 2.5vw, 20px) clamp(4px, 1vw, 8px) clamp(12px, 2vh, 16px) clamp(4px, 1vw, 8px);
+  }
+  
+  .mobileFeaturesSection {
+    width: clamp(260px, 98vw, 340px);
+    min-width: 0;
+    max-width: clamp(280px, 100vw, 340px);
+    padding: clamp(12px, 2vw, 16px) clamp(8px, 1.5vw, 12px);
+  }
+  
+  .featuresCardBanner {
+    width: clamp(280px, 99vw, 100vw);
+    max-width: clamp(280px, 100vw, 100vw);
+    min-width: 0;
+    padding: clamp(6px, 1vw, 8px) clamp(1px, 0.3vw, 2px);
+  }
+  
+  .featuresGridBanner {
+    flex-direction: column;
+    gap: clamp(12px, 2vh, 16px);
+    align-items: center;
+  }
+  
+  .featuresColBanner {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    align-items: flex-start;
+  }
+  
+  .bottomLogoGroup {
+    margin: clamp(8px, 2vh, 16px) 0 clamp(4px, 1vh, 8px) 0;
+  }
+  
+  .subscribeForm {
+    flex-direction: column;
+    gap: clamp(4px, 1vh, 8px);
+    width: 100%;
+  }
+  
+  .emailInput {
+    width: 100%;
+    min-width: 0;
+    max-width: clamp(280px, 95vw, 320px);
+  }
+  
+  .subscribeBtn2 {
+    width: 100%;
+    min-width: 0;
+    max-width: clamp(280px, 95vw, 320px);
+  }
+}
+
+@media (max-width: 400px) {
+  .topHeading {
+    font-size: clamp(18px, 5vw, 24px);
+    line-height: 1.4;
+  }
+  
+  .pricingBadge {
+    font-size: clamp(10px, 3vw, 14px);
+    margin-top: clamp(30px, 6vh, 60px);
+  }
+  
+  .brandGroup {
+    top: clamp(12px, 2vh, 20px);
+    left: clamp(6px, 1.5vw, 12px);
+  }
+  
+  .avatarGroup {
+    top: clamp(10px, 2vh, 18px);
+    right: clamp(6px, 1.5vw, 12px);
+    z-index: 20;
+  }
+  
+  .standardCard, .proCard {
+    width: clamp(240px, 95vw, 280px);
+    padding: clamp(12px, 2vw, 16px) clamp(8px, 1.5vw, 12px);
+  }
+  
+  .mobileFeaturesSection {
+    width: clamp(240px, 95vw, 280px);
+    padding: clamp(10px, 1.8vw, 14px) clamp(6px, 1.2vw, 10px);
+  }
+  
+  .featuresCardBanner {
+    width: clamp(260px, 98vw, 280px);
+    padding: clamp(8px, 1.5vw, 12px) clamp(4px, 1vw, 8px);
+  }
+  
+  .toggleGroupSlider {
+    width: clamp(160px, 95vw, 180px);
+    height: clamp(32px, 4vh, 36px);
+  }
+  
+  .toggleBtn, .toggleBtnActive {
+    font-size: clamp(12px, 3vw, 14px);
+  }
+} 

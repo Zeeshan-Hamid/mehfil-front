@@ -1,0 +1,536 @@
+.getInTouchSection {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 120px 60px 120px;
+  box-sizing: border-box;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  z-index: 2;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 100%;
+  color: #000000;
+  margin: 0 0 24px 0;
+  text-align: center;
+  width: 311px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subtitle {
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #40433B;
+  margin: 0;
+  width: 550px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  z-index: 2;
+}
+
+.formBackground {
+  position: relative;
+  width: 1200px;
+  height: 540px;
+  background: #9CAD89;
+  border-radius: 16px;
+  padding: 80px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 880px;
+}
+
+.inputRow {
+  display: flex;
+  gap: 26px;
+  width: 100%;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 427px;
+}
+
+.label {
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  color: #000000;
+  margin: 0;
+}
+
+.input {
+  width: 427px;
+  height: 40px;
+  background: #FFFFFF;
+  border: 1px solid #707070;
+  border-radius: 8px;
+  padding: 0 16px;
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #000000;
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: #000000;
+}
+
+.messageGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 880px;
+}
+
+.textarea {
+  width: 880px;
+  height: 160px;
+  background: #FFFFFF;
+  border: 1px solid #707070;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #000000;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.textarea::placeholder {
+  color: #000000;
+}
+
+.termsGroup {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  background: #FFFFFF;
+  border: 1px solid #868686;
+  border-radius: 2px;
+  cursor: pointer;
+  appearance: none;
+  position: relative;
+}
+
+.checkbox:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000000;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.checkboxText {
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.submitButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 38px;
+  gap: 10px;
+  width: 127px;
+  height: 40px;
+  background: #AF8EBA;
+  border-radius: 44px;
+  border: none;
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #000000;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  align-self: center;
+  margin-top: 10px;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .getInTouchSection {
+    padding: 60px 40px 40px 40px;
+  }
+  
+  .header {
+    margin-bottom: 40px;
+  }
+  
+  .title {
+    font-size: clamp(36px, 5vw, 52px);
+    width: auto;
+    height: auto;
+  }
+  
+  .subtitle {
+    font-size: clamp(16px, 2vw, 18px);
+    width: auto;
+    height: auto;
+  }
+  
+  .formBackground {
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    padding: 40px;
+  }
+  
+  .inputRow {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .inputGroup {
+    width: 100%;
+  }
+  
+  .input {
+    width: 100%;
+  }
+  
+  .messageGroup {
+    width: 100%;
+  }
+  
+  .textarea {
+    width: 100%;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .getInTouchSection {
+    padding: 40px 20px 30px 20px;
+  }
+  
+  .header {
+    margin-bottom: 30px;
+  }
+  
+  .title {
+    font-size: clamp(28px, 6vw, 42px);
+    margin-bottom: 16px;
+  }
+  
+  .subtitle {
+    font-size: clamp(14px, 3vw, 16px);
+  }
+  
+  .formBackground {
+    padding: 30px 20px;
+    min-height: 450px;
+  }
+  
+  .contactForm {
+    gap: 15px;
+  }
+  
+  .inputRow {
+    gap: 15px;
+  }
+  
+  .inputGroup {
+    gap: 8px;
+  }
+  
+  .label {
+    font-size: clamp(14px, 3vw, 16px);
+  }
+  
+  .input {
+    height: 36px;
+    font-size: clamp(14px, 3vw, 16px);
+  }
+  
+  .messageGroup {
+    gap: 8px;
+  }
+  
+  .textarea {
+    height: 120px;
+    font-size: clamp(14px, 3vw, 16px);
+  }
+  
+  .termsGroup {
+    margin-top: 8px;
+  }
+  
+  .checkboxText {
+    font-size: clamp(12px, 2.5vw, 14px);
+  }
+  
+  .submitButton {
+    width: 120px;
+    height: 36px;
+    font-size: clamp(14px, 3vw, 16px);
+    margin-top: 8px;
+  }
+}
+
+/* Small Mobile Responsive */
+@media (max-width: 480px) {
+  .getInTouchSection {
+    padding: 30px 16px 25px 16px;
+  }
+  
+  .header {
+    margin-bottom: 25px;
+  }
+  
+  .title {
+    font-size: clamp(24px, 7vw, 32px);
+    margin-bottom: 12px;
+  }
+  
+  .subtitle {
+    font-size: clamp(13px, 3.5vw, 15px);
+  }
+  
+  .formBackground {
+    padding: 25px 16px;
+    min-height: 400px;
+  }
+  
+  .contactForm {
+    gap: 12px;
+  }
+  
+  .inputRow {
+    gap: 12px;
+  }
+  
+  .inputGroup {
+    gap: 6px;
+  }
+  
+  .label {
+    font-size: clamp(13px, 3.5vw, 15px);
+  }
+  
+  .input {
+    height: 32px;
+    font-size: clamp(13px, 3.5vw, 15px);
+  }
+  
+  .messageGroup {
+    gap: 6px;
+  }
+  
+  .textarea {
+    height: 100px;
+    font-size: clamp(13px, 3.5vw, 15px);
+  }
+  
+  .termsGroup {
+    margin-top: 8px;
+  }
+  
+  .checkboxText {
+    font-size: clamp(11px, 3vw, 13px);
+  }
+  
+  .submitButton {
+    width: 110px;
+    height: 32px;
+    font-size: clamp(13px, 3.5vw, 15px);
+    margin-top: 8px;
+  }
+}
+
+/* Status Messages */
+.statusMessage {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-radius: 8px;
+  font-size: clamp(14px, 3vw, 16px);
+  font-weight: 500;
+  min-width: 300px;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: slideInRight 0.3s ease-out;
+}
+
+.statusMessage.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.statusMessage.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.closeStatus {
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 12px;
+  color: inherit;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  line-height: 1;
+  min-width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeStatus:hover {
+  opacity: 1;
+}
+
+/* Loading States */
+.submitButton.submitting {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.submitButton.submitting:hover {
+  background-color: #6c757d;
+  transform: none;
+}
+
+/* Disabled Form Elements */
+.input:disabled,
+.textarea:disabled {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.checkbox:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.checkbox:disabled + .checkboxText {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Animation */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive adjustments for status messages */
+@media (max-width: 768px) {
+  .statusMessage {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    min-width: auto;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .statusMessage {
+    top: 5px;
+    right: 5px;
+    left: 5px;
+    padding: 12px 16px;
+    font-size: clamp(13px, 3.5vw, 15px);
+  }
+} 

@@ -1,0 +1,367 @@
+.eventHighlightsSection {
+  position: relative;
+  width: 100%;
+  height: 774px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.decorativeElements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+/* Left Purple Rectangle */
+.leftPurpleRect {
+  position: absolute;
+  width: 720px;
+  height: 774px;
+  left: 0px;
+  top: 0px;
+  background: #AF8EBA;
+  border-radius: 0px 0px 245.156px 0px;
+}
+
+/* Right Purple Rectangle */
+.rightPurpleRect {
+  position: absolute;
+  width: 720px;
+  height: 774px;
+  right: 0px;
+  top: 0px;
+  background: #AF8EBA;
+  border-radius: 0px 0px 0px 245.156px;
+}
+
+/* Left Mask Group */
+.leftMaskGroup {
+  position: absolute;
+  width: 198.06px;
+  height: 181.43px;
+  left: 29.42px;
+  top: 477.24px;
+  transform: rotate(180deg);
+}
+
+.leftVector {
+  position: absolute;
+  left: 2.04%;
+  right: 89.69%;
+  top: 60.79%;
+  bottom: 18.73%;
+  background: #C3937C;
+  transform: matrix(0.48, -0.88, -0.88, -0.48, 0, 0);
+}
+
+.leftInnerRect {
+  position: absolute;
+  width: 290.1px;
+  height: 250.06px;
+  left: -20.12px;
+  top: 454.37px;
+  background: #9025B4;
+  transform: rotate(180deg);
+}
+
+/* Right Mask Group */
+.rightMaskGroup {
+  position: absolute;
+  width: 198.06px;
+  height: 181.43px;
+  left: 1227.54px;
+  top: 140.56px;
+}
+
+.rightVector {
+  position: absolute;
+  left: 85.25%;
+  right: 6.49%;
+  top: 17.91%;
+  bottom: 61.62%;
+  background: #C3937C;
+  transform: matrix(-0.48, 0.88, 0.88, 0.48, 0, 0);
+}
+
+.rightInnerRect {
+  position: absolute;
+  width: 290.1px;
+  height: 250.06px;
+  left: 1185.05px;
+  top: 94.79px;
+  background: #9026B4;
+}
+
+/* Center Image Container */
+.centerImageContainer {
+  position: absolute;
+  width: 428.91px;
+  height: 426.25px;
+  left: 718.52px;
+  top: 51.48px;
+}
+
+.centerPurpleRect {
+  position: absolute;
+  width: 383.26px;
+  height: 349.76px;
+  left: 745.49px;
+  top: 73.55px;
+  background: #9025B4;
+}
+
+.centerImage {
+  position: absolute;
+  width: 342.4px;
+  height: 338.32px;
+  left: 718.52px;
+  top: 51.48px;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 100%;
+  color: #000000;
+  margin: 0 0 24px 0;
+  text-align: center;
+  width: 405px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subtitle {
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #40433B;
+  margin: 0;
+  width: 419px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .eventHighlightsSection {
+    height: 600px;
+  }
+  
+  .leftPurpleRect,
+  .rightPurpleRect {
+    width: 50%;
+    height: 100%;
+  }
+  
+  .leftPurpleRect {
+    border-radius: 0px 0px 150px 0px;
+  }
+  
+  .rightPurpleRect {
+    border-radius: 0px 0px 0px 150px;
+  }
+  
+  .leftMaskGroup {
+    left: 20px;
+    top: 350px;
+    transform: rotate(180deg) scale(0.8);
+  }
+  
+  .rightMaskGroup {
+    right: 20px;
+    left: auto;
+    top: 100px;
+    transform: scale(0.8);
+  }
+  
+  .centerImageContainer {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+  }
+  
+  .centerPurpleRect {
+    width: 280px;
+    height: 250px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .centerImage {
+    width: 240px;
+    height: 240px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-17.66deg);
+  }
+  
+  .title {
+    font-size: clamp(36px, 5vw, 52px);
+    width: auto;
+    height: auto;
+  }
+  
+  .subtitle {
+    font-size: clamp(16px, 2vw, 18px);
+    width: auto;
+    height: auto;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .eventHighlightsSection {
+    height: 500px;
+  }
+  
+  .leftPurpleRect,
+  .rightPurpleRect {
+    width: 60%;
+    height: 100%;
+  }
+  
+  .leftPurpleRect {
+    border-radius: 0px 0px 100px 0px;
+  }
+  
+  .rightPurpleRect {
+    border-radius: 0px 0px 0px 100px;
+  }
+  
+  .leftMaskGroup {
+    left: 10px;
+    top: 300px;
+    transform: rotate(180deg) scale(0.6);
+  }
+  
+  .rightMaskGroup {
+    right: 10px;
+    left: auto;
+    top: 80px;
+    transform: scale(0.6);
+  }
+  
+  .centerImageContainer {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .centerPurpleRect {
+    width: 180px;
+    height: 160px;
+  }
+  
+  .centerImage {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .title {
+    font-size: clamp(28px, 6vw, 42px);
+    margin-bottom: 16px;
+  }
+  
+  .subtitle {
+    font-size: clamp(14px, 3vw, 16px);
+  }
+}
+
+/* Small Mobile Responsive */
+@media (max-width: 480px) {
+  .eventHighlightsSection {
+    height: 400px;
+  }
+  
+  .leftPurpleRect,
+  .rightPurpleRect {
+    width: 70%;
+    height: 100%;
+  }
+  
+  .leftPurpleRect {
+    border-radius: 0px 0px 80px 0px;
+  }
+  
+  .rightPurpleRect {
+    border-radius: 0px 0px 0px 80px;
+  }
+  
+  .leftMaskGroup {
+    left: 5px;
+    top: 250px;
+    transform: rotate(180deg) scale(0.4);
+  }
+  
+  .rightMaskGroup {
+    right: 5px;
+    left: auto;
+    top: 60px;
+    transform: scale(0.4);
+  }
+  
+  .centerImageContainer {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .centerPurpleRect {
+    width: 130px;
+    height: 120px;
+  }
+  
+  .centerImage {
+    width: 110px;
+    height: 110px;
+  }
+  
+  .title {
+    font-size: clamp(24px, 7vw, 32px);
+    margin-bottom: 12px;
+  }
+  
+  .subtitle {
+    font-size: clamp(13px, 3.5vw, 15px);
+  }
+} 

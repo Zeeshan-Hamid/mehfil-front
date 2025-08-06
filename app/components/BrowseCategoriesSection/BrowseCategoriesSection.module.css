@@ -1,0 +1,337 @@
+.browseCategoriesSection {
+  position: relative;
+  width: 100%;
+  height: 641px;
+  background: #9CAD89;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 120px 60px 120px;
+  box-sizing: border-box;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #9CAD89;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  z-index: 2;
+}
+
+.headerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 100%;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.subtitle {
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  margin: 0;
+  max-width: 671px;
+}
+
+.viewAllButton {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 106px;
+  height: 32px;
+  background: #AF8EBA;
+  border-radius: 90px;
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  z-index: 3;
+}
+
+.viewAllButton:hover {
+  transform: translateY(-2px);
+}
+
+.categoriesGrid {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 333px;
+  display: flex;
+  gap: 52px;
+  z-index: 2;
+}
+
+.categoriesContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.categoryCard {
+  position: relative;
+  width: 261px;
+  height: 333px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.categoryCard:hover {
+  transform: translateY(-5px);
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.categoryImage {
+  border-radius: 16px;
+}
+
+.hoverOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 138px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 0.833333px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8.1px);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.categoryCard:hover .hoverOverlay {
+  opacity: 1;
+}
+
+.overlayContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  gap: 8px;
+}
+
+.categoryTitle {
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  text-transform: capitalize;
+  color: #000000;
+  margin: 0;
+}
+
+.categoryDescription {
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #484848;
+  margin: 0;
+  max-width: 191px;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .browseCategoriesSection {
+    height: auto;
+    min-height: 600px;
+    padding: 60px 40px 40px 40px;
+  }
+  
+  .header {
+    margin-bottom: 40px;
+  }
+  
+  .title {
+    font-size: clamp(36px, 5vw, 52px);
+  }
+  
+  .subtitle {
+    font-size: clamp(16px, 2vw, 18px);
+  }
+  
+  .categoriesGrid {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .categoryCard {
+    width: calc(50% - 15px);
+    max-width: 280px;
+    height: 280px;
+  }
+  
+  .hoverOverlay {
+    height: 120px;
+  }
+  
+  .categoryTitle {
+    font-size: clamp(18px, 3vw, 20px);
+  }
+  
+  .categoryDescription {
+    font-size: clamp(14px, 2vw, 16px);
+  }
+  
+  .viewAllButton {
+    top: -50px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .browseCategoriesSection {
+    min-height: 500px;
+    padding: 40px 20px 30px 20px;
+  }
+  
+  .header {
+    margin-bottom: 60px;
+  }
+  
+  .title {
+    font-size: clamp(28px, 6vw, 42px);
+  }
+  
+  .subtitle {
+    font-size: clamp(14px, 3vw, 16px);
+  }
+  
+  .categoriesGrid {
+    gap: 20px;
+  }
+  
+  .categoryCard {
+    width: 100%;
+    max-width: 300px;
+    height: 250px;
+  }
+  
+  .hoverOverlay {
+    height: 100px;
+  }
+  
+  .overlayContent {
+    padding: 15px;
+    gap: 6px;
+  }
+  
+  .categoryTitle {
+    font-size: clamp(16px, 4vw, 18px);
+  }
+  
+  .categoryDescription {
+    font-size: clamp(13px, 3vw, 14px);
+    line-height: 1.3;
+  }
+  
+  .viewAllButton {
+    top: -50px;
+  }
+}
+
+/* Small Mobile Responsive */
+@media (max-width: 480px) {
+  .browseCategoriesSection {
+    min-height: 450px;
+    padding: 30px 16px 25px 16px;
+  }
+  
+  .header {
+    margin-bottom: 70px;
+  }
+  
+  .title {
+    font-size: clamp(24px, 7vw, 32px);
+  }
+  
+  .subtitle {
+    font-size: clamp(13px, 3.5vw, 15px);
+  }
+  
+  .viewAllButton {
+    width: 90px;
+    height: 28px;
+    font-size: 13px;
+    top: -50px;
+  }
+  
+  .categoriesGrid {
+    gap: 15px;
+  }
+  
+  .categoryCard {
+    height: 200px;
+  }
+  
+  .hoverOverlay {
+    height: 80px;
+  }
+  
+  .overlayContent {
+    padding: 12px;
+    gap: 4px;
+  }
+  
+  .categoryTitle {
+    font-size: clamp(14px, 5vw, 16px);
+  }
+  
+  .categoryDescription {
+    font-size: clamp(12px, 3.5vw, 13px);
+  }
+} 

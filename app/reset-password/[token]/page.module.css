@@ -1,0 +1,634 @@
+.resetPasswordCard {
+  position: absolute;
+  width: 851px;
+  height: 697px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.leftPanel {
+  width: 347px;
+  height: 697px;
+  background: linear-gradient(to bottom, #C4AAD9, #9D69C7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo {
+  width: 121px;
+  height: 155.57px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.brandTitle {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.leftDesc {
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  line-height: 19px;
+  color: #fff;
+  max-width: 245px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.leftBackBtn {
+  width: 157px;
+  height: 48px;
+  border: 1px solid #fff;
+  border-radius: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  cursor: pointer;
+  background: transparent;
+  transition: background 0.2s;
+}
+
+.leftBackBtn:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+.leftBackBtnInner {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #fff;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.rightPanel {
+  width: 504px;
+  height: 697px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(17.5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formContainer {
+  width: 329px;
+}
+
+.heading {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 35px;
+  color: #000;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.subheading {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000;
+  margin-bottom: 32px;
+  text-align: left;
+  opacity: 0.8;
+}
+
+.form {
+  margin-bottom: 24px;
+}
+
+.errorMessage {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #dc2626;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.inputGroup {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.inputField {
+  width: 100%;
+  height: 48px;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 8px;
+  padding: 0 16px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  color: #000;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.inputField::placeholder {
+  color: rgba(0,0,0,0.6);
+  opacity: 1;
+}
+
+.inputField:focus {
+  border-color: #AF8EBA;
+  box-shadow: 0 0 0 2px rgba(175, 142, 186, 0.2);
+}
+
+.passwordRequirements {
+  margin-top: 8px;
+  padding: 12px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.passwordRequirements p {
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.passwordRequirements ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.passwordRequirements li {
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.passwordRequirements li::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.requirementMet {
+  color: #10b981;
+}
+
+.requirementMet::before {
+  background: #10b981;
+  background-image: url("data:image/svg+xml,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10 3L4.5 8.5L2 6' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+  background-size: 8px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.requirementNotMet {
+  color: #6b7280;
+}
+
+.requirementNotMet::before {
+  background: #d1d5db;
+}
+
+.submitButton {
+  width: 100%;
+  height: 48px;
+  background: #AF8EBA;
+  border-radius: 44px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submitButton:hover {
+  background: #9A7BA5;
+}
+
+.submitButtonDisabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.bottomLinks {
+  text-align: center;
+}
+
+.rememberPassword {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+}
+
+.linkButton {
+  text-decoration: underline;
+  color: #8B6B9A;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.2s;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+}
+
+.linkButton:hover {
+  color: #7A5A89;
+}
+
+/* Loading Card Styles */
+.loadingCard {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(17.5px);
+  border-radius: 25px;
+  padding: 48px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #AF8EBA;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loadingTitle {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000;
+  margin-bottom: 16px;
+}
+
+.loadingMessage {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000;
+  opacity: 0.8;
+}
+
+/* Success Card Styles */
+.successCard {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(17.5px);
+  border-radius: 25px;
+  padding: 48px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.successIcon {
+  color: #10b981;
+  margin-bottom: 24px;
+}
+
+.successTitle {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 32px;
+  color: #000;
+  margin-bottom: 16px;
+}
+
+.successMessage {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000;
+  margin-bottom: 32px;
+  opacity: 0.8;
+}
+
+.successActions {
+  display: flex;
+  justify-content: center;
+}
+
+.backButton {
+  background: #AF8EBA;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 44px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.backButton:hover {
+  background: #9A7BA5;
+}
+
+/* Error Card Styles */
+.errorCard {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(17.5px);
+  border-radius: 25px;
+  padding: 48px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.errorIcon {
+  color: #ef4444;
+  margin-bottom: 24px;
+}
+
+.errorTitle {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 32px;
+  color: #000;
+  margin-bottom: 16px;
+}
+
+.errorMessage {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000;
+  margin-bottom: 32px;
+  opacity: 0.8;
+}
+
+.errorActions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.primaryButton {
+  background: #AF8EBA;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 44px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  min-width: 160px;
+}
+
+.primaryButton:hover {
+  background: #9A7BA5;
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #8B6B9A;
+  border: 1px solid #8B6B9A;
+  padding: 12px 24px;
+  border-radius: 44px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 160px;
+}
+
+.secondaryButton:hover {
+  background: #8B6B9A;
+  color: white;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1100px) {
+  .resetPasswordCard {
+    width: 95vw;
+    height: 90vh;
+    min-width: 320px;
+    min-height: 400px;
+  }
+  .leftPanel {
+    width: 35%;
+    min-width: 180px;
+    height: 100%;
+  }
+  .rightPanel {
+    width: 65%;
+    min-width: 220px;
+    height: 100%;
+  }
+  .formContainer {
+    width: 90%;
+    min-width: 200px;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 800px) {
+  .resetPasswordCard {
+    flex-direction: column;
+    width: 98vw;
+    height: auto;
+    min-height: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 18px;
+  }
+  .leftPanel {
+    width: 100%;
+    height: 220px;
+    min-height: 120px;
+    border-radius: 18px 18px 0 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 24px;
+  }
+  .rightPanel {
+    width: 100%;
+    height: auto;
+    min-height: 320px;
+    border-radius: 0 0 18px 18px;
+    padding: 24px 0;
+    justify-content: flex-start;
+  }
+  .formContainer {
+    width: 95%;
+    min-width: 0;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .logo {
+    width: 80px;
+    height: 100px;
+  }
+  .brandTitle {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 12px;
+  }
+  .leftDesc {
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .resetPasswordCard {
+    flex-direction: column;
+    width: 100vw;
+    min-width: 0;
+    border-radius: 0;
+    left: 0;
+    top: 0;
+    transform: none;
+    position: fixed;
+    height: 100vh;
+    box-shadow: none;
+    background: transparent;
+  }
+  .leftPanel {
+    width: 100vw;
+    min-width: 0;
+    height: auto;
+    min-height: 120px;
+    border-radius: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 8px 18px 8px;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #C4AAD9, #9D69C7);
+  }
+  .rightPanel {
+    width: 100vw;
+    min-width: 0;
+    height: auto;
+    min-height: 0;
+    border-radius: 0;
+    padding: 18px 0 0 0;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.10);
+    backdrop-filter: blur(17.5px);
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+  }
+  .formContainer {
+    width: 98vw;
+    min-width: 0;
+    max-width: 100vw;
+    padding: 0 8px;
+    margin: 0 auto;
+  }
+  .logo {
+    width: 48px;
+    height: 60px;
+    margin-bottom: 0;
+    margin-top: 0;
+    display: block;
+  }
+  .brandTitle {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 2px;
+    margin-top: 0;
+    text-align: center;
+    display: block;
+  }
+  .leftDesc {
+    font-size: 10px;
+    line-height: 13px;
+    margin-bottom: 8px;
+    max-width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+    margin-top: 0;
+  }
+  .heading {
+    font-size: 22px;
+    line-height: 24px;
+  }
+  .subheading {
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 16px;
+  }
+  .inputField {
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.12) !important;
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .submitButton {
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+    border: 1px solid rgba(0,0,0,0.12);
+  }
+  .leftBackBtn {
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+    border: 1px solid rgba(0,0,0,0.12);
+  }
+  .passwordRequirements {
+    background: rgba(0,0,0,0.05) !important;
+    border: 1px solid rgba(0,0,0,0.1) !important;
+  }
+} 

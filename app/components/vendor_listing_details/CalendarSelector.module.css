@@ -1,0 +1,199 @@
+/* CalendarSelector.module.css */
+
+.calendarContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 22px;
+  position: relative;
+  min-width: 270px;
+  width: fit-content;
+  max-width: 340px;
+  background: #fff;
+  box-shadow: 2px 16px 19px rgba(0, 0, 0, 0.09);
+  border-radius: 8px;
+  /* overflow: visible; */
+}
+
+.reactCalendar {
+  width: 258px;
+  background: none;
+  border: none;
+  font-family: 'Avenir Next LT Pro', 'Avenir', 'Nunito', 'Inter', sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-width: 220px;
+  width: 100%;
+  height: 16px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.monthLabel, .yearLabel {
+  width: auto;
+  min-width: 60px;
+  height: 14px;
+  font-family: 'Avenir Next LT Pro', 'Avenir', 'Nunito', 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: #4A5660;
+  margin: 0 2px;
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+}
+
+.navArrow {
+  width: 16px;
+  height: 16px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #B5BEC6;
+  font-size: 18px;
+  padding: 0;
+}
+
+.weekdays {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+  width: 258px;
+  height: 20px;
+  margin-bottom: 8px;
+}
+
+.weekday {
+  width: 30px;
+  height: 12px;
+  font-family: 'Avenir Next LT Pro', 'Avenir', 'Nunito', 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #B5BEC6;
+}
+
+.datesGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 258px;
+  height: calc(6 * 30px + 5 * 8px); /* 6 rows of 30px + 5 gaps of 8px */
+  /* overflow: visible; */
+  padding-bottom: 0;
+  justify-content: flex-start;
+}
+
+.datesRow {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 8px;
+  width: 258px;
+  height: 30px;
+}
+
+.dateCell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border-radius: 29px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dateCellActive {
+  background: #AF8EBA;
+  color: #fff !important;
+}
+
+.dateCellInactive {
+  opacity: 0.45;
+  color: #B5BEC6 !important;
+  background: none !important;
+  cursor: pointer;
+}
+.dateCellInactive .dateCellText {
+  color: #B5BEC6 !important;
+}
+
+.dateCellText {
+  width: 20px;
+  height: 15px;
+  font-family: 'Avenir Next LT Pro', 'Avenir', 'Nunito', 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: #4A5660;
+}
+
+.dateCellActive .dateCellText {
+  color: #fff;
+}
+
+.pickerPopup {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+  padding: 8px 0;
+  min-width: 120px;
+  max-height: 220px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.pickerOption {
+  padding: 8px 18px;
+  font-size: 14px;
+  color: #4A5660;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: 'Avenir Next LT Pro', 'Avenir', 'Nunito', 'Inter', sans-serif;
+  transition: background 0.15s, color 0.15s;
+}
+.pickerOption:hover, .pickerOption.selected {
+  background: #F3EAF7;
+  color: #AF8EBA;
+}
+
+.pickerPopup::-webkit-scrollbar {
+  width: 6px;
+  background: #eee;
+  border-radius: 8px;
+}
+.pickerPopup::-webkit-scrollbar-thumb {
+  background: #E0CFED;
+  border-radius: 8px;
+} 

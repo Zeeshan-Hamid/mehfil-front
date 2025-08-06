@@ -1,0 +1,287 @@
+.topbar-fullwidth {
+  width: 100vw;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+  background: #AF8EBA;
+  opacity: 1;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: clamp(60px, 8vw, 84px);
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.topbar-inner {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  padding: 0 clamp(16px, 2vw, 24px);
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 1.5vw, 20px);
+  flex-shrink: 0;
+}
+
+.topbar-logo-group {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1vw, 12px);
+  margin-right: clamp(20px, 3vw, 32px);
+}
+
+.topbar-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 1.5vw, 20px);
+}
+
+.topbar-spacer {
+  flex-grow: 1;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 1.5vw, 20px);
+  flex-shrink: 0;
+}
+
+.topbar-search {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.18);
+  border-radius: clamp(16px, 2vw, 22px);
+  padding: 0 clamp(8px, 1.5vw, 12px);
+  height: clamp(28px, 4vw, 36px);
+  min-width: clamp(120px, 15vw, 180px);
+}
+
+.topbar-search input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: clamp(14px, 2vw, 17px);
+  width: clamp(80px, 12vw, 140px);
+  padding: clamp(4px, 0.8vw, 6px) 0;
+}
+
+.topbar-auth {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: clamp(10px, 1.5vw, 14px);
+  height: clamp(32px, 4vw, 40px);
+  position: relative;
+}
+
+.topbar-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(10px, 1.5vw, 14px);
+  height: clamp(32px, 4vw, 40px);
+}
+
+.topbar-icon-btn {
+  width: clamp(24px, 3.5vw, 32px);
+  height: clamp(24px, 3.5vw, 32px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFEBEC;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.08);
+}
+
+.topbar-signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: clamp(80px, 10vw, 110px);
+  height: clamp(32px, 4vw, 40px);
+  background: #9CAD89;
+  border-radius: 44px;
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: clamp(13px, 1.8vw, 16px);
+  color: #fff;
+  border: none;
+  transition: background 0.2s;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.12);
+}
+.topbar-signup:hover {
+  background: #7e9c6b;
+}
+
+.topbar-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: clamp(80px, 10vw, 110px);
+  height: clamp(32px, 4vw, 40px);
+  background: #AF8EBA;
+  border: 1px solid #fff;
+  border-radius: 44px;
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: clamp(13px, 1.8vw, 16px);
+  color: #fff;
+  transition: background 0.2s;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.12);
+}
+.topbar-login:hover {
+  background: #9b6eb5;
+}
+
+.topbar-vendor {
+  width: clamp(80px, 10vw, 120px);
+  height: clamp(16px, 2vw, 19px);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: clamp(13px, 1.8vw, 16px);
+  line-height: clamp(16px, 2vw, 19px);
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  color: #FFFFFF;
+  background: none;
+  border: none;
+  text-decoration: none;
+  margin-left: clamp(6px, 1vw, 8px);
+  position: relative;
+} 
+
+@media (max-width: 1200px) {
+  .topbar-inner {
+    padding: 0 clamp(12px, 1.5vw, 16px);
+    gap: 0;
+  }
+  .topbar-links {
+    gap: clamp(12px, 1.8vw, 18px);
+  }
+  .topbar-right {
+    gap: clamp(12px, 1.8vw, 18px);
+  }
+  .topbar-auth {
+    gap: clamp(6px, 1vw, 8px);
+  }
+  .topbar-search {
+    min-width: clamp(80px, 12vw, 120px);
+    height: clamp(28px, 4vw, 38px);
+    padding: 0 clamp(8px, 1.2vw, 10px);
+  }
+  .topbar-signup, .topbar-login {
+    width: clamp(70px, 8vw, 90px);
+    height: clamp(28px, 3.5vw, 34px);
+    font-size: clamp(11px, 1.4vw, 13px);
+  }
+  .topbar-vendor {
+    font-size: clamp(11px, 1.4vw, 13px);
+    width: clamp(70px, 8vw, 90px);
+  }
+  .topbar-icon-btn {
+    width: clamp(22px, 3vw, 28px);
+    height: clamp(22px, 3vw, 28px);
+  }
+}
+
+@media (max-width: 800px) {
+  .topbar-inner {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 clamp(2px, 0.5vw, 4px);
+    min-height: clamp(80px, 12vw, 120px);
+    gap: clamp(6px, 1vw, 8px);
+  }
+  .topbar-left {
+    gap: clamp(8px, 1.2vw, 12px);
+    margin-bottom: clamp(2px, 0.5vw, 4px);
+  }
+  .topbar-links {
+    gap: clamp(6px, 1vw, 10px);
+  }
+  .topbar-right {
+    gap: clamp(6px, 1vw, 10px);
+  }
+  .topbar-auth {
+    gap: clamp(2px, 0.5vw, 4px);
+  }
+  .topbar-search {
+    min-width: clamp(60px, 8vw, 80px);
+    height: clamp(24px, 3vw, 32px);
+    padding: 0 clamp(4px, 0.8vw, 6px);
+  }
+  .topbar-signup, .topbar-login {
+    width: clamp(50px, 7vw, 70px);
+    height: clamp(20px, 2.5vw, 28px);
+    font-size: clamp(9px, 1.2vw, 11px);
+  }
+  .topbar-vendor {
+    font-size: clamp(9px, 1.2vw, 11px);
+    width: clamp(50px, 7vw, 70px);
+  }
+  .topbar-icon-btn {
+    width: clamp(16px, 2.5vw, 22px);
+    height: clamp(16px, 2.5vw, 22px);
+  }
+}
+
+@media (max-width: 500px) {
+  .topbar-inner {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 clamp(1px, 0.3vw, 2px);
+    min-height: clamp(60px, 10vw, 100px);
+    gap: clamp(2px, 0.5vw, 4px);
+  }
+  .topbar-left {
+    gap: clamp(4px, 0.8vw, 6px);
+    margin-bottom: clamp(1px, 0.3vw, 2px);
+  }
+  .topbar-links {
+    gap: clamp(2px, 0.5vw, 4px);
+    font-size: clamp(8px, 1vw, 10px);
+  }
+  .topbar-right {
+    gap: clamp(2px, 0.5vw, 4px);
+  }
+  .topbar-auth {
+    gap: clamp(1px, 0.3vw, 2px);
+  }
+  .topbar-search {
+    min-width: clamp(30px, 5vw, 40px);
+    height: clamp(18px, 2.5vw, 24px);
+    padding: 0 clamp(1px, 0.3vw, 2px);
+  }
+  .topbar-signup, .topbar-login {
+    width: clamp(36px, 5vw, 48px);
+    height: clamp(14px, 2vw, 18px);
+    font-size: clamp(7px, 1vw, 9px);
+    border-radius: 40px;
+  }
+  .topbar-vendor {
+    font-size: clamp(7px, 1vw, 9px);
+    width: clamp(36px, 5vw, 48px);
+  }
+  .topbar-icon-btn {
+    width: clamp(12px, 2vw, 16px);
+    height: clamp(12px, 2vw, 16px);
+  }
+  .topbar-logo-group span {
+    font-size: clamp(8px, 1vw, 10px) !important;
+  }
+} 

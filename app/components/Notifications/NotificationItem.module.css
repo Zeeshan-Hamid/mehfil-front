@@ -1,0 +1,167 @@
+/* Notification Item Styles */
+.notificationItem {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.notificationItem:hover {
+  background: #f8f9fa;
+}
+
+.notificationItem:last-child {
+  border-bottom: none;
+}
+
+.notificationItem.unread {
+  background: #f8f8ff;
+  border-left: 3px solid #af8eba;
+}
+
+.notificationItem.unread:hover {
+  background: #f0f0ff;
+}
+
+/* Priority styles */
+.notificationItem.urgent {
+  border-left: 3px solid #ff4444;
+}
+
+.notificationItem.high {
+  border-left: 3px solid #ff8800;
+}
+
+.notificationItem.medium {
+  border-left: 3px solid #af8eba;
+}
+
+.notificationItem.low {
+  border-left: 3px solid #28a745;
+}
+
+.icon {
+  font-size: 20px;
+  margin-right: 12px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.message {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 6px;
+  word-wrap: break-word;
+}
+
+.time {
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+}
+
+.unreadDot {
+  width: 8px;
+  height: 8px;
+  background: #af8eba;
+  border-radius: 50%;
+  margin-left: 12px;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 4px;
+  margin-left: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
+}
+
+.notificationItem:hover .actions {
+  opacity: 1;
+}
+
+.actionBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  color: #666;
+  font-size: 12px;
+  line-height: 1;
+  transition: all 0.2s ease;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionBtn:hover {
+  background: #e0e0e0;
+  color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .notificationItem {
+    padding: 12px 16px;
+  }
+  
+  .icon {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .title {
+    font-size: 13px;
+  }
+  
+  .message {
+    font-size: 12px;
+  }
+  
+  .time {
+    font-size: 11px;
+  }
+  
+  .actions {
+    opacity: 1; /* Always show on mobile */
+  }
+}
+
+/* Animation for new notifications */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.notificationItem.new {
+  animation: slideIn 0.3s ease-out;
+}
