@@ -38,7 +38,7 @@ export default function CustomerSignupPage() {
     
     // Open Google OAuth popup for customer signup
     // Use the backend URL directly, not the frontend
-    const backUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+    const backUrl =  'https://mehfil-backend-tzep.onrender.com';
     const googleAuthUrl = `${backUrl}/api/auth/google/customer`;
     console.log('Google Auth URL:', googleAuthUrl);
     

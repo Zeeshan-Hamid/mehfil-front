@@ -17,7 +17,7 @@ export async function POST(request) {
         { status: 400 }
       );
     }
-    const backUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://mehfil-backend-tzep.onrender.com';
+    const backUrl =  'https://mehfil-backend-tzep.onrender.com';
     const backendUrl = `${backUrl}/api/chatbot/customer-chat`;
     
     console.log('Making request to backend:', backendUrl);

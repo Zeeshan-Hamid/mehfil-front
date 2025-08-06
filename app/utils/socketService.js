@@ -37,7 +37,7 @@ class SocketService {
     }
 
     try {
-      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+      const backendUrl =  'https://mehfil-backend-tzep.onrender.com';
       console.log('🔌 [SocketService] Connecting to server...', backendUrl);
       console.log('🔌 [SocketService] Token available:', !!token);
       console.log('🔌 [SocketService] Environment variables:', {

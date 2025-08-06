@@ -213,7 +213,7 @@ export default function MessagesContent() {
       console.log('🔌 [MessagesContent] Connecting to socket with token:', !!token);
       
       // Test backend connectivity first
-      fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'}/api/health`)
+      fetch(`${ 'https://mehfil-backend-tzep.onrender.com'}/api/health`)
         .then(response => {
           console.log('✅ [MessagesContent] Backend is reachable:', response.status);
         })

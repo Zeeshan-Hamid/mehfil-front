@@ -20,7 +20,7 @@ export async function POST(request) {
     }
 
     // Forward the request to the backend API
-    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+    const backendUrl =  'https://mehfil-backend-tzep.onrender.com';
     console.log('Forwarding to backend:', `${backendUrl}/api/chatbot/vendor-chat`);
     
     const response = await fetch(`${backendUrl}/api/chatbot/vendor-chat`, {
