@@ -63,8 +63,8 @@ export default function CustomerSignupPage() {
       console.log('Message origin:', event.origin);
       console.log('Expected origin:', window.location.origin);
       
-      // Check if the message is from our backend popup and contains auth data
-      if ((event.origin === window.location.origin || event.origin === 'http://localhost:8000') && event.data.type === 'GOOGLE_AUTH_SUCCESS') {
+      // Check if the message is from our backend popup and contains auth data NEXT_PUBLIC_BACKEND_URL=
+      if ((event.origin === window.location.origin || event.origin === 'https://mehfil-backend-tzep.onrender.com') && event.data.type === 'GOOGLE_AUTH_SUCCESS') {
         console.log('Google auth success received');
         const { user, token } = event.data;
         
@@ -85,7 +85,7 @@ export default function CustomerSignupPage() {
         
         // Redirect to home page for customers
         router.push('/');
-      } else if ((event.origin === window.location.origin || event.origin === 'http://localhost:8000') && event.data.type === 'GOOGLE_AUTH_ERROR') {
+      } else if ((event.origin === window.location.origin || event.origin === 'https://mehfil-backend-tzep.onrender.com') && event.data.type === 'GOOGLE_AUTH_ERROR') {
         console.log('Google auth error received:', event.data.error);
         // Handle error
         try {

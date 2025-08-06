@@ -31,7 +31,7 @@ export default function VendorSignupPage() {
   useEffect(() => {
     const handleMessage = (event) => {
       // Only accept messages from our backend
-      if (event.origin !== 'http://localhost:8000') return;
+      if (event.origin !== 'https://mehfil-backend-tzep.onrender.com') return;
 
       if (event.data.type === 'GOOGLE_AUTH_SUCCESS') {
         const { user, token } = event.data;
