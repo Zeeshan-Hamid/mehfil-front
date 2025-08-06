@@ -52,7 +52,7 @@ export default function Reviews({ eventId, vendorData, isPreview = false }) {
       }
     } catch (error) {
       console.error('Error loading reviews:', error);
-      toast.error('Failed to load reviews');
+    
     } finally {
       setLoading(false);
     }
